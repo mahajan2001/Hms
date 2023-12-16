@@ -1,0 +1,149 @@
+CRITICAL - 2023-12-14 06:59:13 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\HMS\admin\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\HMS\admin\index.php(34): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2023-12-14 07:00:32 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\HMS\admin\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\HMS\admin\index.php(34): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2023-12-14 07:00:35 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\HMS\admin\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\HMS\admin\index.php(34): require('C:\\xampp\\htdocs...')
+#4 {main}
+ERROR - 2023-12-14 11:32:58 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2023-12-14 11:32:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\xampp\htdocs\HMS\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\HMS\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\HMS\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\HMS\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\HMS\admin\app\Core\MyModel.php(96): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\HMS\admin\app\Controllers\Login.php(28): App\Core\MyModel->get_single_row('tbl_master_sett...', '*')
+#6 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-14 11:34:10 --> Class "Firebase\JWT\JWT" not found
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Login->login()
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-12-14 11:36:52 --> Undefined array key "address"
+#0 C:\xampp\htdocs\HMS\admin\public\includes\sidebar.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 57)
+#1 C:\xampp\htdocs\HMS\admin\app\Views\dashboard\index.php(146): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\HMS\admin\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\HMS\admin\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\HMS\admin\system\Common.php(1092): CodeIgniter\View\View->render('dashboard/index...', Array, true)
+#5 C:\xampp\htdocs\HMS\admin\app\Controllers\Dashboard.php(28): view('dashboard/index...', Array)
+#6 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Dashboard->index()
+#7 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-12-14 12:33:59 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2023-12-14 12:33:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\xampp\htdocs\HMS\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\HMS\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\HMS\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\HMS\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\HMS\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\HMS\admin\app\Controllers\Dashboard.php(23): App\Core\MyModel->get_all_rows('tbl_members', '*', Array)
+#6 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Dashboard->index()
+#7 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-12-14 12:38:44 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2023-12-14 12:38:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\xampp\htdocs\HMS\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\HMS\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\HMS\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\HMS\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\HMS\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\HMS\admin\app\Controllers\Dashboard.php(23): App\Core\MyModel->get_all_rows('tbl_members', '*', Array)
+#6 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Dashboard->index()
+#7 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-12-14 12:38:54 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2023-12-14 12:38:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\xampp\htdocs\HMS\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\HMS\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\HMS\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\HMS\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\HMS\admin\app\Core\MyModel.php(96): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\HMS\admin\app\Controllers\Login.php(28): App\Core\MyModel->get_single_row('tbl_master_sett...', '*')
+#6 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-14 16:40:58 --> Undefined property: stdClass::$mobile_no
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-14 16:45:07 --> Undefined property: stdClass::$mobile_no
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-14 17:24:13 --> Undefined property: stdClass::$mobile_no
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-14 17:27:06 --> Undefined property: stdClass::$mobile_no
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-14 17:29:33 --> Undefined property: stdClass::$mobile_no
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 40)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-14 17:36:25 --> Undefined property: stdClass::$academic_yera
+#0 C:\xampp\htdocs\HMS\admin\app\Controllers\User.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\User->addstudentdata()
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2023-12-14 17:38:10 --> Table 'hms.tbl_user' doesn't exist
+ERROR - 2023-12-14 17:41:40 --> Unknown column 'gender' in 'field list'
+ERROR - 2023-12-14 18:12:01 --> Unknown column 'gender' in 'field list'
+CRITICAL - 2023-12-14 18:16:57 --> Undefined constant "App\Controllers\TBL_MEMBERS"
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Officer->index()
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-12-14 18:17:14 --> Undefined constant "App\Controllers\TBL_MEMBERS"
+#0 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(802): App\Controllers\Officer->index()
+#1 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#2 C:\xampp\htdocs\HMS\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\HMS\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}

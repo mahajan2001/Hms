@@ -1,0 +1,135 @@
+CRITICAL - 2022-11-19 12:57:00 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Login->login()
+#1 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-19 12:57:03 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Login->login()
+#1 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-19 12:57:09 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Login->login()
+#1 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-19 12:59:55 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Login->login()
+#1 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-11-19 13:03:10 --> Table 'dakecompany.tbl_tools' doesn't exist
+CRITICAL - 2022-11-19 13:03:10 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(976): App\Core\MyModel->get_all_rows('tbl_tools as t', 't.tool_name,t.t...', Array, Array, Array, '', '', Array, 't.id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->inventory_graph()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:03:10 --> Table 'dakecompany.tbl_order_details' doesn't exist
+CRITICAL - 2022-11-19 13:03:10 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(1003): App\Core\MyModel->get_all_rows('tbl_order_detai...', '*', Array, Array, Array, '', '', Array, 'tool_id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->all_tools_order()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:03:50 --> Table 'dakecompany.tbl_logs' doesn't exist
+ERROR - 2022-11-19 13:05:27 --> Table 'dakecompany.tbl_order_details' doesn't exist
+CRITICAL - 2022-11-19 13:05:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(1003): App\Core\MyModel->get_all_rows('tbl_order_detai...', '*', Array, Array, Array, '', '', Array, 'tool_id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->all_tools_order()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:05:27 --> Table 'dakecompany.tbl_tools' doesn't exist
+CRITICAL - 2022-11-19 13:05:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(976): App\Core\MyModel->get_all_rows('tbl_tools as t', 't.tool_name,t.t...', Array, Array, Array, '', '', Array, 't.id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->inventory_graph()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:05:42 --> Table 'dakecompany.tbl_order_details' doesn't exist
+CRITICAL - 2022-11-19 13:05:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(1003): App\Core\MyModel->get_all_rows('tbl_order_detai...', '*', Array, Array, Array, '', '', Array, 'tool_id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->all_tools_order()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:05:42 --> Table 'dakecompany.tbl_tools' doesn't exist
+CRITICAL - 2022-11-19 13:05:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(976): App\Core\MyModel->get_all_rows('tbl_tools as t', 't.tool_name,t.t...', Array, Array, Array, '', '', Array, 't.id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->inventory_graph()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:06:42 --> Table 'dakecompany.tbl_project' doesn't exist
+CRITICAL - 2022-11-19 13:06:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Project.php(27): App\Core\MyModel->get_all_rows('tbl_project', '*')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Project->index()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:06:46 --> Table 'dakecompany.tbl_order_details' doesn't exist
+CRITICAL - 2022-11-19 13:06:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(1003): App\Core\MyModel->get_all_rows('tbl_order_detai...', '*', Array, Array, Array, '', '', Array, 'tool_id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->all_tools_order()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:06:46 --> Table 'dakecompany.tbl_tools' doesn't exist
+CRITICAL - 2022-11-19 13:06:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(976): App\Core\MyModel->get_all_rows('tbl_tools as t', 't.tool_name,t.t...', Array, Array, Array, '', '', Array, 't.id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->inventory_graph()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:08:05 --> Table 'dakecompany.tbl_tools' doesn't exist
+CRITICAL - 2022-11-19 13:08:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(976): App\Core\MyModel->get_all_rows('tbl_tools as t', 't.tool_name,t.t...', Array, Array, Array, '', '', Array, 't.id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->inventory_graph()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-11-19 13:08:05 --> Table 'dakecompany.tbl_order_details' doesn't exist
+CRITICAL - 2022-11-19 13:08:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\dakecompany\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\dakecompany\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\dakecompany\admin\app\Controllers\Cpc.php(1003): App\Core\MyModel->get_all_rows('tbl_order_detai...', '*', Array, Array, Array, '', '', Array, 'tool_id')
+#3 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(802): App\Controllers\Cpc->all_tools_order()
+#4 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cpc))
+#5 C:\xampp\htdocs\dakecompany\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\dakecompany\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}

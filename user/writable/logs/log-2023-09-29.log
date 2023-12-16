@@ -1,0 +1,296 @@
+ERROR - 2023-09-29 11:11:30 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2023-09-29 11:11:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(28): App\Core\MyModel->get_all_rows('tbl_members', '*', Array)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->index()
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-09-29 13:18:56 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:18:56 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 13:19:02 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:19:02 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 13:19:13 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:19:13 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 13:19:16 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:19:16 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 13:23:03 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:23:03 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 13:27:17 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 13:27:17 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:42:19 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:42:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:49:54 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:49:54 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:50:03 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:50:03 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:50:04 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:50:04 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:50:08 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:50:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:50:53 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:50:53 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:54:37 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:54:37 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 14:57:08 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 14:57:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-09-29 15:01:54 --> Unknown column 'user_type' in 'where clause'
+CRITICAL - 2023-09-29 15:01:54 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(36): App\Core\MyModel->get_all_rows('tbl_invoice', '*', Array)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-09-29 15:44:43 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 15:46:21 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 15:48:27 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 15:52:48 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 15:57:14 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:05:32 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Views\invoice\add.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 54, Array)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Common.php(1092): CodeIgniter\View\View->render('invoice/add', Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(46): view('invoice/add', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:05:32 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Views\invoice\add.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 54, Array)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Common.php(1092): CodeIgniter\View\View->render('invoice/add', Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Invoice.php(46): view('invoice/add', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Invoice->add()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Invoice))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:06:14 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:09:09 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:09:21 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 16:10:14 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-29 18:25:58 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::set() must be of the type string or null, object given, called in C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php on line 236
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(236): CodeIgniter\Database\BaseBuilder->set('course', Object(stdClass), NULL)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(22): CodeIgniter\Model->insert(Array, true)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Officer.php(99): App\Core\MyModel->insert_data('tbl_members', Array)
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Officer->addOfficer()
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Officer))
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}

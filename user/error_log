@@ -1,0 +1,105 @@
+[23-Apr-2022 12:01:06 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.33. in /home3/pisysqvw/tms.pisystindia.com/admin/vendor/composer/platform_check.php on line 24
+[02-Jun-2022 05:15:33 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:33 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:39 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:40 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:41 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:42 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:46 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:48 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:48 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:49 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:50 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:52 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235
+[02-Jun-2022 05:15:58 America/Chicago] PHP Fatal error:  Uncaught ErrorException: include(): Filename cannot be empty in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php:235
+Stack trace:
+#0 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): File...', '/home3/pisysqvw...', 235, Array)
+#1 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(235): include()
+#2 /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Exceptions\PageNotFoundException), 404)
+#3 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#4 {main}
+  thrown in /home3/pisysqvw/tms.pisystindia.com/admin/system/Debug/Exceptions.php on line 235

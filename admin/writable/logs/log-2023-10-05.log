@@ -1,0 +1,226 @@
+ERROR - 2023-10-05 13:27:39 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2023-10-05 13:27:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Database\BaseConnection.php(570): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Database\BaseBuilder.php(1428): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Livingin.php(46): App\Core\MyModel->get_all_rows('tbl_members', '*', Array)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Livingin->add()
+#7 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Livingin))
+#8 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-10-05 15:15:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as total_mess_subscription)
+FROM `tbl_monthlymessdetails`
+GROUP BY `course`' at line 1
+CRITICAL - 2023-10-05 15:15:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:09:18 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:09:18 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(38): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:11:34 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:11:34 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(38): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:13:26 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:13:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:15:22 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:15:22 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:15:46 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:15:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:15:47 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:15:47 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:15:48 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:15:48 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:17:29 --> Unknown column 'party_messing' in 'field list'
+CRITICAL - 2023-10-05 16:17:29 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(35): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:26:02 --> Unknown column 'sport' in 'field list'
+CRITICAL - 2023-10-05 16:26:02 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:29:33 --> Unknown column 'officer_club' in 'field list'
+CRITICAL - 2023-10-05 16:29:33 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:35:18 --> Unknown column 'tea_club' in 'field list'
+CRITICAL - 2023-10-05 16:35:18 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:36:30 --> Unknown column 'srf' in 'field list'
+CRITICAL - 2023-10-05 16:36:30 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:37:46 --> Unknown column 'entertainment' in 'field list'
+CRITICAL - 2023-10-05 16:37:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:38:15 --> Unknown column 'liabrary' in 'field list'
+CRITICAL - 2023-10-05 16:38:15 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(37): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:38:29 --> Unknown column 'liabrary' in 'field list'
+CRITICAL - 2023-10-05 16:38:29 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(37): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:40:26 --> Unknown column 'hospitality' in 'field list'
+CRITICAL - 2023-10-05 16:40:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:40:58 --> Unknown column 'momento' in 'field list'
+CRITICAL - 2023-10-05 16:40:58 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(36): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:44:06 --> Unknown column 'room_barrier' in 'field list'
+CRITICAL - 2023-10-05 16:44:06 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(37): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:49:53 --> Unknown column 'emp_congency' in 'field list'
+CRITICAL - 2023-10-05 16:49:53 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(37): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-10-05 16:51:04 --> Unknown column 'misc' in 'field list'
+CRITICAL - 2023-10-05 16:51:04 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Core\MyModel.php(76): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\MilitaryOfficersMess\admin\app\Controllers\Coursewisemonthlybill.php(37): App\Core\MyModel->get_all_rows('tbl_monthlymess...', 'bill_of_month,c...', Array, Array, Array, '', '', Array, 'course')
+#3 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(802): App\Controllers\Coursewisemonthlybill->index()
+#4 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coursewisemonthlybill))
+#5 C:\xampp\htdocs\MilitaryOfficersMess\admin\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\MilitaryOfficersMess\admin\index.php(43): CodeIgniter\CodeIgniter->run()
+#7 {main}

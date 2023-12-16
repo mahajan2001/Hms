@@ -1,0 +1,11 @@
+CRITICAL - 2023-12-16 10:36:17 --> Undefined array key "admin_name"
+#0 C:\xampp\htdocs\HMS\user\app\Views\admin\profile.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 58)
+#1 C:\xampp\htdocs\HMS\user\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\HMS\user\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\HMS\user\system\Common.php(1092): CodeIgniter\View\View->render('admin/profile', Array, true)
+#4 C:\xampp\htdocs\HMS\user\app\Controllers\Admins.php(30): view('admin/profile', Array)
+#5 C:\xampp\htdocs\HMS\user\system\CodeIgniter.php(802): App\Controllers\Admins->index()
+#6 C:\xampp\htdocs\HMS\user\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admins))
+#7 C:\xampp\htdocs\HMS\user\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HMS\user\index.php(43): CodeIgniter\CodeIgniter->run()
+#9 {main}
