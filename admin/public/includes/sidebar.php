@@ -11,6 +11,7 @@
                         <!-- <li><a href="<?= VENDOR_PATH ?>"><i class="fa fa-user"></i>Vendor<span></span></a></li> -->
                         <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
                         <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay vacation</a></li>
+                        <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent vacation</a></li>
                     </ul>
                 </li>
                 
@@ -25,7 +26,7 @@
                     </ul>
                 </li>
                 */ ?>
-                <li><a class="sidebar-sub-toggle"><i class="fa-solid fa-money-bill-wave"></i>Monthly Bill <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <!-- <li><a class="sidebar-sub-toggle"><i class="fa-solid fa-money-bill-wave"></i>Monthly Bill <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         <small> (Mess/Institute) </small><span
                         class="sidebar-collapse-icon fa-solid fa-chevron-down"></span></a>
                     <ul>
@@ -34,13 +35,13 @@
                         <li><a href="<?= TEMPORARYDUTY_PATH ?>"><i class="fa fa-user"></i>Temporary Duty<span></span></a></li>
                         <li><a href="<?= GUESTBILL_PATH ?>"><i class="fa fa-user"></i>Guest<span></span></a></li>
                     </ul>
-                </li>
-                <li><a href="<?= INVOICE_PATH ?>"><i class="fas fa-file-invoice-dollar"></i> Monthly Bill Invoices </a></li>
+                </li> -->
+                <!-- <li><a href="<?= INVOICE_PATH ?>"><i class="fas fa-file-invoice-dollar"></i> Monthly Bill Invoices </a></li>
                 <li><a href="<?= COURSEWISEMONTHLYBLL_PATH ?>"><i class="fa fa-cogs"></i>Course Wise Monthly Mess Bill</a></li>
                 <li><a href="<?= EXPENSE_PATH ?>"><i class="fa fa-inr"></i>Expense</a></li>
-                <li><a href="<?= MASTER_PATH ?>"><i class="fa fa-cogs"></i>Master Settings</a></li>
-                <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
-                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li>
+                <li><a href="<?= MASTER_PATH ?>"><i class="fa fa-cogs"></i>Master Settings</a></li> -->
+                <!-- <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
+                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li> -->
             </ul>
         </div>
     </div>

@@ -51,7 +51,7 @@
                                         <div class="form-group">
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Name</label>
-                                            <select id="hotel_name" class="form-control required" name="hotel_name"
+                                            <select id="hostel_name" class="form-control required" name="hostel_name"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
 
@@ -72,9 +72,9 @@
                                         <div class="form-group">
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Block</label>
-                                            <select id="hotel_block" class="form-control required" name="hotel_block"
+                                            <select id="hostel_block" class="form-control required" name="hostel_block"
                                                 data-none-selected-text="Non Selected">
-                                                
+                                                <option value="">Non Selected</option>
                                             </select>
                                             <span id="hotel_block_error_message" style="color:red"></span>
                                         </div>
@@ -86,11 +86,27 @@
                                         <div class="form-group">
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Floor</label>
-                                            <select id="hotel_block" class="form-control required" name="hotel_block"
+                                            <select id="hostel_floor" class="form-control required" name="hostel_floor"
+                                                data-none-selected-text="Non Selected">
+                                                <option value="">Non Selected</option>
+                                                <option value="">1St Floor</option>
+                                                <option value="">2St Floor</option>
+                                                <option value="">3St Floor</option>
+                                                <option value="">4St Floor</option>
+                                                <option value="">Ground</option>
+                                            </select>
+                                            <span id="hostel_floor_error_message" style="color:red"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <small class="req text-danger">* </small>
+                                            <label>No of Bed</label>
+                                            <select id="no_of_bed" class="form-control required" name="no_of_bed"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
                                             </select>
-                                            <span id="hotel_block_error_message" style="color:red"></span>
+                                            <span id="no_of_bed_error_message" style="color:red"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -112,15 +128,15 @@
 </div><!-- /# content wrap -->
 <script>
 
-$('#hotel_name').on('change', function () {
+    $('#hostel_name').on('change', function () {
         
-        var hotel_name =  $("#hotel_name").val();
-        // alert(hotel_name);
+        var hostel_name =  $("#hostel_name").val();
+      // alert(hostel_name);
         $.ajax({
             url: " <?= ROOM_PATH ?>/blockdata",
             dataType: "JSON",
             method: "POST",
-            data: { hotel_name:hotel_name },
+            data: { hostel_name:hostel_name },
             beforeSend: function () {
                 $('.searchh2').css('display', 'block');
                 $('.searchh2').css('color', 'blue');
@@ -129,21 +145,51 @@ $('#hotel_name').on('change', function () {
                 $('.searchh2').css('display', 'none');
             },
             success: function (data) {
-                $("#hotel_block").find('option').remove();
-                $("#hotel_block").selectpicker("refresh");
-                var html = "";
+				 $('#hostel_block').html('');
+                var html = "<option value=''>Non Selected</option>";
                 for (var i = 0; i < data.length; i++) {
-                    html += '<option value="' + data[i].hostel_id + '">' + data[i].block_name + '</option>';
+                    html += '<option value="' + data[i].id + '">' + data[i].block_name+ '</option>';
                 }
-				 $('#hotel_block').append(html);
-                $('.selectpicker').selectpicker('refresh');
-
+				 $('#hostel_block').append(html);
             }
 
         });
 
     })
+   
+/*
+    function adddata() {
+        var hostel_name = $("#hostel_name").val();
+        var hostel_block = $("#hostel_block").val();
+        var hostel_floor = $("#hostel_floor").val();
+        var no_of_bed = $("#no_of_bed").val();
+        
+        $.ajax({
+            url: " <?= ROOM_PATH ?>/addroom ",
+            type: "POST",
+            datatype: "json",
+            crossDomain: true,
+            data: JSON.stringify({
+                "hostel_name": hostel_name,
+                "hostel_block": hostel_block,
+                "hostel_floor":hostel_floor,
+                "no_of_bed": no_of_bed,
+                
 
+            }),
+            success: function (data) {
+                if (data.success == true) {
+                    window.location.href = "<?= ROOM_PATH ?>"
+                } else {
+                    window.location.reload();
+                }
+            },
+            error: function (data) {
+            }
+        })
+    }
+
+*/
 </script>
 
 

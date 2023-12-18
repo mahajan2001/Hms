@@ -91,11 +91,11 @@ define('DB_DATABASE', 'hms');
 
 
 //DOMAIN Paths
-define('DOMAIN_URL', 'http://localhost/HMS/');
+define('DOMAIN_URL', 'http://localhost/Hms/');
 define('SITE_URL', DOMAIN_URL . "user/");
 
 //BASE Paths
-define('DOMAIN_BASE_URL', $_SERVER['DOCUMENT_ROOT'] . '/HMS/');
+define('DOMAIN_BASE_URL', $_SERVER['DOCUMENT_ROOT'] . '/Hms/');
 define('BASE_URL', DOMAIN_BASE_URL . "user/");
 
 //Assets

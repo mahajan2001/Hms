@@ -91,7 +91,7 @@ define('DB_DATABASE', 'whatsapppoc');
 
 
 //DOMAIN Paths
-define('DOMAIN_URL', 'http://localhost/WhatsappPOC/');
+define('DOMAIN_URL', 'http://localhost/Hms/');
 define('SITE_URL', DOMAIN_URL);
 
 //BASE Paths
