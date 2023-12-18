@@ -50,7 +50,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Full Name:</label>
                                             <input id="name" class="form-control required" type="text" name="name"
-                                                placeholder="Enter student Name">
+                                                placeholder="Enter student Name" value="<?php echo $students['name']; ?>">
                                             <span id="name_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Date of Birth:</label>
                                             <input id="dob" class="form-control required" type="date" name="dob"
-                                                placeholder="Select the Birth Date">
+                                                placeholder="Select the Birth Date"  value="<?php echo $students['dob']; ?>">
                                             <span id="dob_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Gender:</label>
                                             <select id="gender" class="form-control required" name="gender"
-                                                placeholder="Select the Gender">
+                                                placeholder="Select the Gender"  value="<?php echo $students['gender']; ?>">
                                                 <option value=""></option>
                                                 <option value="M">Male</option>
                                                 <option value="F">Female</option>
@@ -85,7 +85,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Blood Group:</label>
                                             <select id="blood_group" class="form-control required" name="blood_group"
-                                                placeholder="Select the Blood Group">
+                                                placeholder="Select the Blood Group" value="<?php echo $students['blood_group']; ?>">
                                                 <option value=""></option>
                                                 <option value="A+">A positive</option>
                                                 <option value="A+">A negative</option>
@@ -107,7 +107,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Address for Correspondence:</label>
                                             <input id="address" class="form-control required" type="text" name="address"
-                                                placeholder="Enter address">
+                                                placeholder="Enter address" value="<?php echo $students['address']; ?>">
                                             <span id="address_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Permanent Address</label>
                                             <input id="permanent_address" class="form-control required" type="text" name="permanent_address"
-                                                placeholder="Enter Permanent Address">
+                                                placeholder="Enter Permanent Address" value="<?php echo $students['permanent_address']; ?>">
                                             <span id="permanent_address_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -127,7 +127,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Postal Code</label>
                                             <input id="postal_code" class="form-control required" onkeypress="return isNumberKey(event)" type="text"
-                                                name="postal_code" placeholder="Enter Postal Code">
+                                                name="postal_code" placeholder="Enter Postal Code" value="<?php echo $students['postal_code']; ?>">
                                             <span id="postal_code_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Mobile No.</label>
                                             <input id="mobile_no" onkeypress="return isNumberKey(event)" class="form-control required" type="text"
-                                                name="mobile_no" placeholder="Enter Mobile No">
+                                                name="mobile_no" placeholder="Enter Mobile No"  value="<?php echo $students['mobile_no']; ?>">
                                             <span id="mobile_no_error" style="color:red"></span>
                                         </div>
                                     </div>  
@@ -147,7 +147,7 @@
                                                 <small class="req text-danger">* </small>
                                                 <label>Parent Contact No</label>
                                                 <input id="parent_mobile" class="form-control required" type="text"
-                                                    name="parent_mobile" placeholder="Enter Parent Contact No">
+                                                    name="parent_mobile" placeholder="Enter Parent Contact No" value="<?php echo $students['parent_mobile']; ?>">
                                                 <span id="parent_mobile_code_error_message" style="color:red"></span>
                                             </div>
                                         </div>
@@ -155,7 +155,7 @@
                                             <div class="form-group">
                                                 <label>Landline No.(with STD Code)</label>
                                                 <input id="landline" class="form-control required" type="text"
-                                                    name="landline" placeholder="Enter Landline No">
+                                                    name="landline" placeholder="Enter Landline No" value="<?php echo $students['landline']; ?>">
                                                 <span id="landline_code_error_message" style="color:red"></span>
                                             </div>
                                         </div>
@@ -167,7 +167,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Gmail</label>
                                             <input id="gmail" class="form-control required" type="text" name="gmail"
-                                                placeholder="Enter Gmail">
+                                                placeholder="Enter Gmail" value="<?php echo $students['gmail']; ?>">
                                             <span id="gmail_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@
                                         <div class="form-group">
                                             <label>Driving License No</label>
                                             <input id="dl_no" class="form-control required" type="text" name="dl_no"
-                                                placeholder="Enter Driving License No">
+                                                placeholder="Enter Driving License No" value="<?php echo $students['dl_no']; ?>">
                                             <span id="dl_no_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>PAN Details</label>
                                             <input id="pd_no" class="form-control required" onkeypress="return validatePan(event)" type="text" name="pd_no"
-                                                placeholder="Enter PAN Details">
+                                                placeholder="Enter PAN Details" value="<?php echo $students['pd_no']; ?>">
                                             <span id="pd_no_error" style="color:red"></span>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>AAdhar No</label>
                                             <input id="aadhar_no" class="form-control required"  onkeypress="return isNumberKey(event)" type="text"
-                                                name="aadhar_no" placeholder="Enter AAdhar No">
+                                                name="aadhar_no" placeholder="Enter AAdhar No"  value="<?php echo $students['aadhar_no']; ?>">
                                             <span id="aadhar_no_error" style="color:red"></span>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                     <div class="form-group">
                                         <label>Select signature: </label>
                                         <div class="custom-file">
-                                            <input name="signature" type="file" class="custom-file-input" id="signature">
+                                            <input name="signature" type="file" class="custom-file-input" id="signature" >
                                             <label class="custom-file-label" for="customFile">Select signature</label>
                                         </div>
                                         <span id="signature_error_message" style="color:red"></span>
@@ -229,7 +229,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Organization/lab/Esttb Name</label>
                                             <input id="ole_name" class="form-control required" type="text"
-                                                name="ole_name" placeholder="Enter Organization/lab/Esttb Name ">
+                                                name="ole_name" placeholder="Enter Organization/lab/Esttb Name "  value="<?php echo $students['ole_name']; ?>">
                                             <span id="ole_name_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -238,7 +238,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Course Applied For</label>
                                             <select id="course_type" class="form-control required" name="course_type"
-                                                placeholder="Select Course Applied For">
+                                                placeholder="Select Course Applied For" value="<?php echo $students['course_type']; ?>">
                                                 <option value=""></option>
                                                 <option value="M.Tech">M.Tech</option>
                                                 <option value="M.Sc">M.Sc</option>
@@ -260,7 +260,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Name of Course</label>
                                             <input id="course_name" class="form-control required" type="text"
-                                                name="course_name" placeholder="Enter Name of Course ">
+                                                name="course_name" placeholder="Enter Name of Course " >
                                             <span id="course_name_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -269,7 +269,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Academic Year</label>
                                             <input id="academic_year" class="form-control required" type="text"
-                                                name="academic_year" placeholder="Enter Academic Year">
+                                                name="academic_year" placeholder="Enter Academic Year"  value="<?php echo $students['academic_year']; ?>">
                                             <span id="academic_year_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>DIAT Department Name</label>
                                             <input id="diat_dep_name" class="form-control required" type="text"
-                                                name="diat_dep_name" placeholder="Enter DIAT Department Name ">
+                                                name="diat_dep_name" placeholder="Enter DIAT Department Name "  value="<?php echo $students['diat_dep_name']; ?>">
                                             <span id="diat_dep_name_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -288,7 +288,7 @@
                                         <div class="form-group">
                                             <label>DIAT Reg.No</label>
                                             <input id="reg_no" class="form-control required" type="text" name="reg_no"
-                                                placeholder="Enter DIAT Reg.No">
+                                                placeholder="Enter DIAT Reg.No" value="<?php echo $students['reg_no']; ?>">
                                             <span id="v_error_message" style="color:red"></span>
                                         </div>
                                     </div>
@@ -356,6 +356,7 @@
         var pd_no = $("#pd_no").val();
         var aadhar_no = $("#aadhar_no").val();
         var ole_name = $("#ole_name").val();
+        var course_name = $("#course_name").val();
         var course_type = $("#course_type").val();
         var academic_year = $("#academic_year").val();
         var diat_dep_name = $("#diat_dep_name").val();
@@ -382,6 +383,7 @@
                 "pd_no": pd_no,
                 "aadhar_no": aadhar_no,
                 "ole_name": ole_name,
+                "course_name":course_name,
                 "course_type": course_type,
                 "academic_year": academic_year,
                 "diat_dep_name": diat_dep_name,

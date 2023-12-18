@@ -519,14 +519,20 @@
         var dl_no = $("#dl_no").val();
         var pd_no = $("#pd_no").val();
         var aadhar_no = $("#aadhar_no").val();
-        var image = $("#image").val();
-        var signature =  $("#signature").val();
+        // var image = $('#image')[0].files[0];
+        // var signature = $('#signature')[0].files[0];
         var ole_name = $("#ole_name").val();
+        var course_name = $("#course_name").val();
         var course_type = $("#course_type").val();
         var academic_year = $("#academic_year").val();
         var diat_dep_name = $("#diat_dep_name").val();
         var reg_no = $("#reg_no").val();
-
+        // if (image) {
+        //     var file_extension = image['name'].split('.').pop();
+        // }
+        // if (signature) {
+        //     var file_extension = signature['name'].split('.').pop();
+        // }
         $.ajax({
             url: " <?= USER_PATH ?>/addstudentdata",
             type: "POST",
@@ -547,9 +553,10 @@
                 "dl_no": dl_no,
                 "pd_no": pd_no,
                 "aadhar_no": aadhar_no,
-                "image" : image,
-                "signature" : signature,
+                // "image" : image,
+                // "signature" : signature,
                 "ole_name": ole_name,
+                "course_name":course_name,
                 "course_type": course_type,
                 "academic_year": academic_year,
                 "diat_dep_name": diat_dep_name,

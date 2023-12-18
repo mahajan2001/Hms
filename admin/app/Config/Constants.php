@@ -143,6 +143,12 @@ define('EXPENSE_PATH', SITE_URL . 'expense');
 define('COURSEWISEMONTHLYBLL_PATH', SITE_URL . 'coursewisemonthlybill');
 
 define('USER_PATH', SITE_URL . 'user');
+define('TEMPORAYVACATION_PATH', SITE_URL . 'temporayvacation');
+define('PERMANENTVACATION_PATH', SITE_URL . 'permanentvacation');
+define('ROOM_PATH', SITE_URL . 'room');
+
+
+
 
 
 
@@ -170,5 +176,15 @@ define("TBL_EXPENSE_DETAILS", TBL_PREFIX .  "expense_details");
 
 
 define("TBL_USER_REGISTRATION", TBL_PREFIX .  "user_registration");
+define("TBL_TEMPORARY_VACATION", TBL_PREFIX .  "temporary_vacation");
+define("TBL_PERMANENT_VACATION", TBL_PREFIX .  "permanent_vacation");
+define("TBL_ROOM", TBL_PREFIX .  "room");
+define("TBL_HOSTEL", TBL_PREFIX .  "hostel");
+define("TBL_BLOCK", TBL_PREFIX .  "block");
+
+
+
+
+
 
 

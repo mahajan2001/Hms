@@ -6,10 +6,11 @@
                 <li><a class="sidebar-sub-toggle"><i class="fa fa-gear"></i>Users <span
                             class="sidebar-collapse-icon fa-solid fa-chevron-down"></span></a>
                     <ul>
-                        <li><a href="<?= OFFICER_PATH ?>"><i class="fa fa-user"></i>Officers<span></span></a></li>
-                        <li><a href="<?= OFFICER_PATH ?>/fetchGuests"><i class="fa fa-user"></i>Guests<span></span></a>
-                        <li><a href="<?= VENDOR_PATH ?>"><i class="fa fa-user"></i>Vendor<span></span></a></li>
+                        <!-- <li><a href="<?= OFFICER_PATH ?>"><i class="fa fa-user"></i>Officers<span></span></a></li> -->
+                        <!-- <li><a href="<?= OFFICER_PATH ?>/fetchGuests"><i class="fa fa-user"></i>Guests<span></span></a> -->
+                        <!-- <li><a href="<?= VENDOR_PATH ?>"><i class="fa fa-user"></i>Vendor<span></span></a></li> -->
                         <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
+                        <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay vacation</a></li>
                     </ul>
                 </li>
                 
@@ -39,6 +40,7 @@
                 <li><a href="<?= EXPENSE_PATH ?>"><i class="fa fa-inr"></i>Expense</a></li>
                 <li><a href="<?= MASTER_PATH ?>"><i class="fa fa-cogs"></i>Master Settings</a></li>
                 <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
+                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li>
             </ul>
         </div>
     </div>
