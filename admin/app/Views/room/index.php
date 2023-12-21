@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Students</h1>
+                            <h1>Room</h1>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                             <ol class="breadcrumb float-right">
                                 <li><a href="<?= DASHBOARD_PATH ?>">Dashboard &nbsp; </a></li>
                                 / &nbsp;
-                                <li><a>Students</a></li>
+                                <li><a>Room</a></li>
                                 <!--	<li class="active">Data Table</li>-->
                             </ol>
                         </div>
@@ -52,8 +52,8 @@
                         <div class="card">
 
                             <div class="card-header">
-                                <h4>All Students Temporay Vacation</h4>
-                                <a type="submit" class="btn btn-outline-danger btn-flat btn-sm float-right" href="<?= TEMPORAYVACATION_PATH ?>/temporary_vacation">Add Temporay Vacation</a>
+                                <h4>All ROOM</h4>
+                                <a type="submit" class="btn btn-outline-danger btn-flat btn-sm float-right" href="<?= ROOM_PATH ?>/addroom_view">Add Room</a>
                             </div>
                             <div class="card-body">
                                 <span id="error_msg" style="color:red"></span>
@@ -61,44 +61,25 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Name</th>
-                                            <th>Registration No</th>
-                                            <th>Course</th>
-                                            <th>Phone Number</th>
-                                            <th>Deposit</th>
-                                            <th>Mess Balance</th>
-                                            <th>Total Balance</th>
-                                            <th>Action</th>
+                                            <th>Hostel Block</th>
+                                            <th>No of Beds</th>
+                                            <th>Hostel Floor</th>
                                             <th>Update</th>
-                                            <th>View</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
-                                        if (!empty($temporayvacation)) {
+                                        if (!empty($room)) {
                                             $html = '';
-                                            foreach ($temporayvacation as $row) { ?>
+                                            foreach ($room as $row) { ?>
                                                 <tr>
                                                     <td><?= $row['id'] ?></td>
-                                                    <td><?= $row['name'] ?></td>
-                                                    <td><?= $row['registration_no'] ?></td>
-                                                    <td><?= $row['course_type'] ?></td>
-                                                    <td><?= $row['mobile_no'] ?></td>
-                                                    <td><?= $row['deposit'] ?></td>
-                                                    <td><?= $row['mess_balance'] ?></td>
-                                                    <td><?= $row['total_balance'] ?></td>
-                                                    <td>
-                                                        <div>
-                                                            <label class="switch">
-                                                                <input type="checkbox" class="status_change ct_switch" data-id="<?= $row['id'] ?>" value="<?= $row['status'] ?>" <?= $row['status'] == 1 ? "checked" : "" ?>>
-                                                                <span class="slider round"></span>
-                                                            </label>
-                                                        </div>  
-                                                    </td>
-                                                    <td>&nbsp;&nbsp;<a class="fa-solid fa-pen-to-square text-blue" data-toggle="tooltip" title="Edit Guest!" href="<?= TEMPORAYVACATION_PATH ?>/edit/<?= $row["id"]; ?>"></a>
-                                                    </td>
-                                                    <td>&nbsp;&nbsp;<a class="fa-solid fa-eye text-green" data-toggle="tooltip" title="View Guest!" href="<?= TEMPORAYVACATION_PATH ?>/view/<?= $row["id"]; ?>"></a></td>
+                                                    <td><?= $row['block_id'] ?></td>
+                                                    <td><?= $row['no_of_beds'] ?></td>
+                                                    <td><?= $row['floor_no'] ?></td>
 
+                                                    <td>&nbsp;&nbsp;<a class="fa-solid fa-pen-to-square text-blue" data-toggle="tooltip" title="Edit Guest!" href="<?= ROOM_PATH ?>/edit/<?= $row["id"]; ?>"></a>
+                                                    </td>
                                                 </tr>
                                         <?php
                                             }
@@ -131,7 +112,7 @@
         var id = $(this).attr('data-id');
         $.ajax({
             type: "POST",
-            url: "<?= TEMPORAYVACATION_PATH ?>/change_visibility",
+            url: "<?= USER_PATH ?>/change_visibility",
             data: JSON.stringify({
                 'id': id,
                 'status': visibility

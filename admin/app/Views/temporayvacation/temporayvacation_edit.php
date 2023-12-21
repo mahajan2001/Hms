@@ -117,24 +117,20 @@
                                         </tr>
                                         <tr>
                                             <td>Mess Balance (IF ANY)</td>
-                                            <td collapse="4">Rs:<input class="form-control" id="mess_balance" value="<?php echo $temporayvacation['mess_balance']; ?>" ></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_mess" value="<?php echo $temporayvacation['receipt_no_mess']; ?>" ></td>
-                                            <td collapse="1">Date:<input class="form-control" type="date"  id="date_mess" value="<?php echo $temporayvacation['date_mess']; ?>" ></td>
+                                            <td collapse="4"><input class="form-control" id="mess_balance" value="<?php echo $temporayvacation['mess_balance']; ?>" ></td>
+                                           
                                         </tr>
                                         <tr>
                                             <td id="totalnalance">Total Balance</td>
-                                            <td collapse="4">Rs:<input class="form-control" id="total_balance" value="<?php echo $temporayvacation['total_balance']; ?>" ></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_tobalance" value="<?php echo $temporayvacation['receipt_no_tobalance']; ?>" ></td>
-                                            <td collapse="1">Date:<input class="form-control" type="text" id="date_tobalance"  value="<?php echo $temporayvacation['date_tobalance']; ?>"></td>
-                                        </tr>
+                                            <td collapse="4"><input class="form-control" id="total_balance" value="<?php echo $temporayvacation['total_balance']; ?>" ></td>
+                                           
                                     </tbody>
                                 </table>
                                 <br>
                                 <h3>DECLARATION BY THE HOSTEL RESIDENT</h3>
                                 <br>
-                                <p> 1.I have read the Refund Rules Published by DIAT(DU),pune at the time of submission
-                                    of this form.</p>
-                                <p>2.In View of the above,I request HMS to Stop Billing temporarily. </p>
+                                
+                                <p>1.In View of the above,I request HMS to Stop Billing temporarily. </p>
                             </div>
                             <br>
                             <div class="form-group">
@@ -162,11 +158,11 @@
                 var mobile_no = $("#mobile_no").val();
                 var deposit = $("#deposit").val();
                 var mess_balance = $("#mess_balance").val();
-                var receipt_no_mess = $("#receipt_no_mess").val();
-                var date_mess = $("#date_mess").val();
+               // var receipt_no_mess = $("#receipt_no_mess").val();
+               // var date_mess = $("#date_mess").val();
                 var total_balance = $("#total_balance").val();
-                var receipt_no_tobalance = $("#receipt_no_tobalance").val();
-                var date_tobalance = $("#date_tobalance").val();
+               // var receipt_no_tobalance = $("#receipt_no_tobalance").val();
+               // var date_tobalance = $("#date_tobalance").val();
                 $.ajax({
                     url: " <?= TEMPORAYVACATION_PATH ?>/edittemporayvacation",
                     type: "POST",
@@ -184,11 +180,11 @@
                         "mobile_no": mobile_no,
                         "deposit": deposit,
                         "mess_balance": mess_balance,
-                        "receipt_no_mess": receipt_no_mess,
-                        "date_mess": date_mess,
+                       // "receipt_no_mess": receipt_no_mess,
+                       // "date_mess": date_mess,
                         "total_balance": total_balance,
-                        "receipt_no_tobalance": receipt_no_tobalance,
-                        "date_tobalance": date_tobalance,
+                       // "receipt_no_tobalance": receipt_no_tobalance,
+                       // "date_tobalance": date_tobalance,
                     }),
                     success: function (data) {
                         if (data.success == true) {

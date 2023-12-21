@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Add Room</h1>
+                            <h1>Add Edit</h1>
                         </div>
                     </div>
                 </div>
@@ -15,9 +15,9 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb text-right float-right">
-                                <li><a href="<?= ROOM_PATH ?>">Add Room &nbsp; </a></li>
+                                <li><a href="<?= ROOM_PATH ?>">Add Edit &nbsp; </a></li>
                                 / &nbsp;
-                                <li><a>Add Room</a></li>
+                                <li><a>Edit Room</a></li>
                                 <!--	<li class="active">Data Table</li>-->
                             </ol>
                         </div>
@@ -44,7 +44,7 @@
                                     </div>
                                     <?php
                                 } ?>
-                                <h1>ADD ROOM</h1>
+                                <h1>Edit ROOM</h1>
                                 <br>
                                 <div class="row">
                                     <div class="col-md-5">
@@ -56,7 +56,7 @@
                                                 <option value="">Non Selected</option>
 
                                                 <?php
-                                                foreach ($room as $key => $value) {
+                                                foreach ($rooms as $key => $value) {
                                                     ?>
                                                     <option value="<?php echo $value['id']; ?>">
                                                         <?php echo $value['name']; ?>
@@ -73,7 +73,8 @@
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Block</label>
                                             <select id="hostel_block" class="form-control required" name="hostel_block"
-                                                data-none-selected-text="Non Selected">
+                                                data-none-selected-text="Non Selected"
+                                                value="<?php echo $room['block_id']; ?>">
                                                 <option value="">Non Selected</option>
                                             </select>
                                             <span id="hotel_block_error_message" style="color:red"></span>
@@ -87,6 +88,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Floor</label>
                                             <select id="hostel_floor" class="form-control required" name="hostel_floor"
+                                                value="<?php echo $room['floor_no']; ?>"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
                                                 <option value="1">1St Floor</option>
@@ -103,7 +105,8 @@
                                             <small class="req text-danger">* </small>
                                             <label>No of Bed</label>
                                             <select id="no_of_bed" class="form-control required" name="no_of_bed"
-                                                data-none-selected-text="Non Selected">
+                                                data-none-selected-text="Non Selected"
+                                                value="<?php echo $room['no_of_beds']; ?>">
                                                 <option value="">Non Selected</option>
                                                 <option value="1">Single Sharing</option>
                                                 <option value="2">Twing Sharing</option>
@@ -113,99 +116,103 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <small class="req text-danger">* </small>
-                                            <label>Room Number</label>
-                                            <input id="room_number" class="form-control required" type="text"
-                                                name="room_number" placeholder="Enter Room Number ">
-                                            <span id="room_number_error_message" style="color:red"></span>
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <small class="req text-danger">* </small>
+                                        <label>Room Number</label>
+                                        <input id="room_number" class="form-control required" type="text"
+                                            name="room_number" placeholder="Enter Room Number ">
+                                        <span id="room_number_error_message" style="color:red"></span>
                                     </div>
-
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <button id="submitButton" onclick="return adddata()"
-                                        class="btn btn-outline-primary float-right">SAVE</button>
-                                </div>
+                            <div class="form-group">
+                                <button id="submitButton" onclick="return edit()"
+                                    class="btn btn-outline-primary float-right">UPDATE</button>
+                            </div>
 
-                                </table>
-                            </div><!-- /# card -->
-                        </div><!-- /# column -->
-                    </div><!-- /# row -->
-                </div><!-- /# main content -->
-            </div><!-- /# container-fluid -->
-        </div><!-- /# main -->
-    </div><!-- /# content wrap -->
-    <script>
 
-        $('#hostel_name').on('change', function () {
+                        </div>
 
-            var hostel_name = $("#hostel_name").val();
-            // alert(hostel_name);
-            $.ajax({
-                url: " <?= ROOM_PATH ?>/blockdata",
-                dataType: "JSON",
-                method: "POST",
-                data: { hostel_name: hostel_name },
-                beforeSend: function () {
-                    $('.searchh2').css('display', 'block');
-                    $('.searchh2').css('color', 'blue');
-                },
-                complete: function () {
-                    $('.searchh2').css('display', 'none');
-                },
-                success: function (data) {
-                    $('#hostel_block').html('');
-                    var html = "<option value=''>Non Selected</option>";
-                    for (var i = 0; i < data.length; i++) {
-                        html += '<option value="' + data[i].id + '">' + data[i].block_name + '</option>';
-                    }
-                    $('#hostel_block').append(html);
+
+                        </table>
+                    </div><!-- /# card -->
+                </div><!-- /# column -->
+            </div><!-- /# row -->
+        </div><!-- /# main content -->
+    </div><!-- /# container-fluid -->
+</div><!-- /# main -->
+</div><!-- /# content wrap -->
+<script>
+
+    $('#hostel_name').on('change', function () {
+
+        var hostel_name = $("#hostel_name").val();
+        // alert(hostel_name);
+        $.ajax({
+            url: " <?= ROOM_PATH ?>/blockdata",
+            dataType: "JSON",
+            method: "POST",
+            data: { hostel_name: hostel_name },
+            beforeSend: function () {
+                $('.searchh2').css('display', 'block');
+                $('.searchh2').css('color', 'blue');
+            },
+            complete: function () {
+                $('.searchh2').css('display', 'none');
+            },
+            success: function (data) {
+                $('#hostel_block').html('');
+                var html = "<option value=''>Non Selected</option>";
+                for (var i = 0; i < data.length; i++) {
+                    html += '<option value="' + data[i].id + '">' + data[i].block_name + '</option>';
                 }
+                $('#hostel_block').append(html);
+            }
 
-            });
+        });
 
+    })
+
+
+    function edit() {
+        var id = <?php echo $room['id']; ?>;
+        var hostel_block = $("#hostel_block").val();
+        var hostel_floor = $("#hostel_floor").val();
+        var no_of_bed = $("#no_of_bed").val();
+        var room_number = $("#room_number").val();
+
+        $.ajax({
+            url: " <?= ROOM_PATH ?>/editroom ",
+            type: "POST",
+            datatype: "json",
+            crossDomain: true,
+            data: JSON.stringify({
+                "id": id,
+                "hostel_block": hostel_block,
+                "hostel_floor": hostel_floor,
+                "no_of_bed": no_of_bed,
+                "room_number": room_number,
+
+            }),
+            success: function (data) {
+                if (data.success == true) {
+                    window.location.href = "<?= ROOM_PATH ?>"
+                } else {
+                    window.location.reload();
+                }
+            },
+            error: function (data) {
+            }
         })
+    }
 
 
-        function adddata() {
-            var hostel_block = $("#hostel_block").val();
-            var hostel_floor = $("#hostel_floor").val();
-            var no_of_bed = $("#no_of_bed").val();
-            var room_number = $("#room_number").val();
-
-            $.ajax({
-                url: " <?= ROOM_PATH ?>/addroom ",
-                type: "POST",
-                datatype: "json",
-                crossDomain: true,
-                data: JSON.stringify({
-                    "hostel_block": hostel_block,
-                    "hostel_floor": hostel_floor,
-                    "no_of_bed": no_of_bed,
-                    "room_number": room_number,
+</script>
 
 
 
-                }),
-                success: function (data) {
-                    if (data.success == true) {
-                        window.location.href = "<?= ROOM_PATH ?>"
-                    } else {
-                        window.location.reload();
-                    }
-                },
-                error: function (data) {
-                }
-            })
-        }
-
-
-    </script>
-
-
-
-    <?php include(INCLUDESPATH . '/footer.php'); ?>
+<?php include(INCLUDESPATH . '/footer.php'); ?>

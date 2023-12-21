@@ -189,7 +189,7 @@ class MyController extends BaseController
     {
         $email = \Config\Services::email();
         $email->setTo($to);
-        $email->setFrom('sukruthindlekar39@gmail.com', 'Tools and Management Sevices');
+        $email->setFrom('hmc@diat.ac.in', 'DIAT');
 
         $email->setSubject($subject);
         $email->setMessage($message);
@@ -197,7 +197,6 @@ class MyController extends BaseController
         if ($email->send()) {
             return 1;
         } else {
-
             return 0;
         }
     }
@@ -230,6 +229,28 @@ class MyController extends BaseController
         }
 
         return $result;
+    }
+
+    function generateRandomPassword() {
+        // Define character sets
+        $digits = '0123456789';
+        $capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $smallLetters = 'abcdefghijklmnopqrstuvwxyz';
+        $specialSymbols = '!@#$%^&*()-_=+[]{}|;:,.<>?';
+    
+        // Generate one character from each character set
+        $randomDigit = $digits[random_int(0, strlen($digits) - 1)];
+        $randomCapitalLetter = $capitalLetters[random_int(0, strlen($capitalLetters) - 1)];
+        $randomSmallLetter = $smallLetters[random_int(0, strlen($smallLetters) - 1)];
+        $randomSpecialSymbol = $specialSymbols[random_int(0, strlen($specialSymbols) - 1)];
+    
+        // Concatenate the characters to form the password
+        $password = $randomDigit . $randomCapitalLetter . $randomSmallLetter . $randomSpecialSymbol;
+    
+        // Shuffle the password to randomize the order
+        $password = str_shuffle($password);
+    
+        return $password;
     }
 
     public function generateOTPSixDigit()
@@ -266,9 +287,9 @@ class MyController extends BaseController
         $email = \Config\Services::email();
         try {
             //Recipients
-            $email->setFrom('developeraira@gmail.com', $data['project_name']);
+            $email->setFrom('hmc@diat.ac.in', $data['project_name']);
             $email->setTo($email_id);         // Add a recipient
-            $email->setReplyTo('developeraira@gmail.com');
+            $email->setReplyTo('hmc@diat.ac.in');
 
             // Attachments
             /*$mail->addAttachment('/var/tmp/file.tar.gz');                 // Add attachments
@@ -527,4 +548,6 @@ class MyController extends BaseController
         $result = $model->get_single_row(TBL_MASTER_SETTINGS, '*');
         return $result;
     }
+
+
 }

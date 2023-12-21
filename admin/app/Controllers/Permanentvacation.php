@@ -31,7 +31,8 @@ class Permanentvacation extends MyController
     
     public function permanent_vacation()
     {
-     
+        $model = new Sitefunction();
+        $this->dataModule['student'] = $model->get_all_rows(TBL_USER_REGISTRATION, '*');
         echo view('permanentvacation/permanent_vacation', $this->dataModule);
     }
 
@@ -49,12 +50,14 @@ class Permanentvacation extends MyController
         $mobile_no = $requestData->mobile_no;
         $deposit = $requestData->deposit;
         $mess_balance = $requestData->mess_balance;
-        $receipt_no_mess = $requestData->receipt_no_mess;
-        $date_mess = $requestData->date_mess;
+       // $receipt_no_mess = $requestData->receipt_no_mess;
+       // $date_mess = $requestData->date_mess;
         $total_balance = $requestData->total_balance;
-        $receipt_no_tobalance= $requestData->receipt_no_tobalance;
-        $date_tobalance = $requestData->date_tobalance;
-
+       // $receipt_no_tobalance= $requestData->receipt_no_tobalance;
+      //  $date_tobalance = $requestData->date_tobalance;
+        
+       // $image =  $requestData->image;
+        $account_name =  $requestData->account_name;
         $bankaccount_no = $requestData->bankaccount_no;
         $bank_name = $requestData->bank_name;
         $branch_name = $requestData->branch_name;
@@ -70,16 +73,18 @@ class Permanentvacation extends MyController
             'mobile_no'=>$mobile_no,
             'deposit' => $deposit,
             'mess_balance' => $mess_balance,
-            'receipt_no_mess' => $receipt_no_mess,
-            'date_mess'=>$date_mess,
+            //'receipt_no_mess' => $receipt_no_mess,
+           // 'date_mess'=>$date_mess,
             'total_balance' => $total_balance,
-            'receipt_no_tobalance' => $receipt_no_tobalance,
-            'date_tobalance' => $date_tobalance,
+           // 'receipt_no_tobalance' => $receipt_no_tobalance,
+          // ' image' =>$image,
+            'account_name' =>$account_name,
+            //'date_tobalance' => $date_tobalance,
             'bankaccount_no' => $bankaccount_no,
             'bank_name' => $bank_name,
             'branch_name' => $branch_name,
             'ifsc_code' =>$ifsc_code,
-            'status' => 1,
+            'status' => 0,
             'created_at' => $this->utc_time,
             'updated_at' => $this->utc_time,
         );
@@ -100,7 +105,7 @@ class Permanentvacation extends MyController
     {
         $this->dataModule['id'] = $id;
         $model = new Sitefunction();
-        $result = $model->get_single_row(TBL_TEMPORARY_VACATION, '*', array('id' => $id));
+        $result = $model->get_single_row(TBL_PERMANENT_VACATION, '*', array('id' => $id));
         $this->dataModule['permanentvacation'] = $result;
         echo view('permanentvacation/permanentvacation_edit', $this->dataModule);
     }
@@ -118,12 +123,13 @@ class Permanentvacation extends MyController
         $mobile_no = $requestData->mobile_no;
         $deposit = $requestData->deposit;
         $mess_balance = $requestData->mess_balance;
-        $receipt_no_mess = $requestData->receipt_no_mess;
-        $date_mess = $requestData->date_mess;
+       // $receipt_no_mess = $requestData->receipt_no_mess;
+       // $date_mess = $requestData->date_mess;
         $total_balance = $requestData->total_balance;
-        $receipt_no_tobalance= $requestData->receipt_no_tobalance;
-        $date_tobalance = $requestData->date_tobalance;
-
+       // $receipt_no_tobalance= $requestData->receipt_no_tobalance;
+       // $date_tobalance = $requestData->date_tobalance;
+       // $image = $requestData->image;
+        $account_name =  $requestData->account_name;
         $bankaccount_no = $requestData->bankaccount_no;
         $bank_name = $requestData->bank_name;
         $branch_name = $requestData->branch_name;
@@ -141,11 +147,13 @@ class Permanentvacation extends MyController
             'mobile_no'=>$mobile_no,
             'deposit' => $deposit,
             'mess_balance' => $mess_balance,
-            'receipt_no_mess' => $receipt_no_mess,
-            'date_mess'=>$date_mess,
+           // 'receipt_no_mess' => $receipt_no_mess,
+           // 'date_mess'=>$date_mess,
             'total_balance' => $total_balance,
-            'receipt_no_tobalance' => $receipt_no_tobalance,
-            'date_tobalance' => $date_tobalance,
+           // 'receipt_no_tobalance' => $receipt_no_tobalance,
+           // 'date_tobalance' => $date_tobalance,
+            //'image'=> $image, 
+            'account_name' => $account_name,
             'bankaccount_no' => $bankaccount_no,
             'bank_name' => $bank_name,
             'branch_name' => $branch_name,
@@ -167,5 +175,33 @@ class Permanentvacation extends MyController
         return $this->respond($this->dataModule);
 
     }
+
+    public function change_visibility()
+    {
+        $requestData = $this->request->getJson();
+        $id = $requestData->id;
+        $status = $requestData->status;
+        $model = new Sitefunction();
+        $model->protect(false);
+        $data_array = array('status' => $status, 'updated_at' => $this->utc_time);
+        $model->update_data(TBL_PERMANENT_VACATION, $data_array, array('id' => $id));
+        $data = array(
+            'message' => 'Student status updated Successfully '
+        );
+        $this->dataModule = $this->success($data);
+        return $this->respond($this->dataModule);
+    }
+
+
+    public function view($id)
+    {
+        $this->dataModule['id'] = $id;
+        $model = new Sitefunction();
+        $result = $model->get_single_row(TBL_USER_REGISTRATION, '*', array('id' => $id));
+        $this->dataModule['studentView'] = $result;
+        echo view('permanentvacation/view', $this->dataModule);
+    }
+    
+   
 
 }

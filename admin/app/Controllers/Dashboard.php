@@ -20,11 +20,14 @@ class Dashboard extends MyController
     public function index()
     {
         $model = new Sitefunction();
-        $this->dataModule['officers'] = sizeof($model->get_all_rows(TBL_MEMBERS, '*', array('user_type' => 1)));
+        $this->dataModule['Ghostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 1),array(),'','','',array(),'hostel_id');
         $model = new Sitefunction();
-        $this->dataModule['livingin'] = sizeof($model->get_all_rows(TBL_MONTHLY_MESS_DETAILS, '*', array('type' => 1))); 
+        $this->dataModule['Khostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 2),array(),'','','',array(),'hostel_id');
         $model = new Sitefunction();
-        $this->dataModule['livingout'] = sizeof($model->get_all_rows(TBL_MONTHLY_MESS_DETAILS, '*', array('type' => 2)));
-        echo view('dashboard/index.php', $this->dataModule);
+        $this->dataModule['Yhostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 3),array(),'','','',array(),'hostel_id');
+        $model = new Sitefunction();
+        $this->dataModule['Gohostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 4),array(),'','','',array(),'hostel_id');
+
+        echo view('dashboard/index', $this->dataModule);  
     }
 }

@@ -118,14 +118,12 @@
                                         <tr>
                                             <td >Mess Balance (IF ANY)</td>
                                             <td collapse="4">Rs:<input class="form-control" id="mess_balance" value="<?php echo $permanentvacation['mess_balance']; ?>"></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_mess" value="<?php echo $permanentvacation['receipt_no_mess']; ?>"></td>
-                                            <td collapse="1">Date:<input class="form-control" type="date" id="date_mess"  value="<?php echo $permanentvacation['date_mess']; ?>"></td>
+                                           
                                         </tr>
                                         <tr>
                                             <td id="totalnalance">Total Balance For Refund</td>
                                             <td collapse="4">Rs:<input class="form-control" id="total_balance" value="<?php echo $permanentvacation['total_balance']; ?>"></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_tobalance" value="<?php echo $permanentvacation['receipt_no_tobalance']; ?>"></td>
-                                            <td collapse="1">Date:<input class="form-control" type="date" id="date_tobalance" value="<?php echo $permanentvacation['date_tobalance']; ?>"></td>
+                                           
                                         </tr>
                                     </tbody>
                                 </table>
@@ -151,8 +149,8 @@
                                     <tbody>
                                         <!-- Rows -->
                                         <tr>
-                                            <td>Name of the Student</td>
-                                            <td colspan="3"><input class="form-control"id="name" value="<?php echo $permanentvacation['name']; ?>"></td>
+                                            <td>Name of the Account Holder</td>
+                                            <td colspan="3"><input class="form-control"id="account_name" value="<?php echo $permanentvacation['account_name']; ?>"></td>
                                             
                                         </tr>
                                         <tr>
@@ -169,14 +167,14 @@
                                         </tr>
                                         <tr>
                                             <td>Branch IFSC Code</td>
-                                            <td colspan="4"><input class="form-control" id="ifsc_code" value="<?php echo $permanentvacation['ifsc_code  ']; ?>" ></td>
+                                            <td colspan="4"><input class="form-control" id="ifsc_code" value="<?php echo $permanentvacation['ifsc_code']; ?>" ></td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <br>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Upload checkbook </label>
+                                    <label>Upload cheque /Bank Statement /Passbook </label>
                                         <div class="custom-file">
                                             <input name="image" type="file" class="custom-file-input" id="image">
                                             <label class="custom-file-label" for="customFile">Select Checkbook</label>
@@ -217,12 +215,13 @@
         var mobile_no = $("#mobile_no").val();
         var deposit = $("#deposit").val();
         var mess_balance = $("#mess_balance").val();
-        var receipt_no_mess = $("#receipt_no_mess").val();
-        var date_mess = $("#date_mess").val();
+        //var receipt_no_mess = $("#receipt_no_mess").val();
+       // var date_mess = $("#date_mess").val();
         var total_balance = $("#total_balance").val();
-        var receipt_no_tobalance = $("#receipt_no_tobalance").val();
-        var date_tobalance = $("#date_tobalance").val();
+       // var receipt_no_tobalance = $("#receipt_no_tobalance").val();
+       // var date_tobalance = $("#date_tobalance").val();
         
+        var account_name = $("#account_name").val();
         var bankaccount_no = $("#bankaccount_no").val();
         var bank_name = $("#bank_name").val();
         var branch_name = $("#branch_name").val();
@@ -245,11 +244,13 @@
                 "mobile_no": mobile_no,
                 "deposit": deposit,
                 "mess_balance": mess_balance,
-                "receipt_no_mess": receipt_no_mess,
-                "date_mess": date_mess,
+               // "receipt_no_mess": receipt_no_mess,
+                //"date_mess": date_mess,
                 "total_balance": total_balance,
-                "receipt_no_tobalance": receipt_no_tobalance,
-                "date_tobalance": date_tobalance,
+               // "receipt_no_tobalance": receipt_no_tobalance,
+               // "date_tobalance": date_tobalance,
+
+                "account_name":account_name,
                 "bankaccount_no":bankaccount_no,
                 "bank_name":bank_name,
                 "branch_name":branch_name,

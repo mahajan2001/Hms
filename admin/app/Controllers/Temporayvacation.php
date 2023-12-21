@@ -30,7 +30,9 @@ class Temporayvacation extends MyController
     
     public function temporary_vacation()
     {
-     
+        $model = new Sitefunction();
+        $this->dataModule['student'] = $model->get_all_rows(TBL_USER_REGISTRATION, '*');
+
         echo view('temporayvacation/temporatry_vacation', $this->dataModule);
     }
 
@@ -48,11 +50,11 @@ class Temporayvacation extends MyController
         $mobile_no = $requestData->mobile_no;
         $deposit = $requestData->deposit;
         $mess_balance = $requestData->mess_balance;
-        $receipt_no_mess = $requestData->receipt_no_mess;
-        $date_mess = $requestData->date_mess;
+      //  $receipt_no_mess = $requestData->receipt_no_mess;
+      //  $date_mess = $requestData->date_mess;
         $total_balance = $requestData->total_balance;
-        $receipt_no_tobalance= $requestData->receipt_no_tobalance;
-        $date_tobalance = $requestData->date_tobalance;
+       // $receipt_no_tobalance= $requestData->receipt_no_tobalance;
+       // $date_tobalance = $requestData->date_tobalance;
         
         $data = array(
             'name' => $name,
@@ -65,12 +67,12 @@ class Temporayvacation extends MyController
             'mobile_no'=>$mobile_no,
             'deposit' => $deposit,
             'mess_balance' => $mess_balance,
-            'receipt_no_mess' => $receipt_no_mess,
-            'date_mess'=>$date_mess,
+            //'receipt_no_mess' => $receipt_no_mess,
+            //'date_mess'=>$date_mess,
             'total_balance' => $total_balance,
-            'receipt_no_tobalance' => $receipt_no_tobalance,
-            'date_tobalance' => $date_tobalance,
-            'status' => 1,
+           // 'receipt_no_tobalance' => $receipt_no_tobalance,
+           // 'date_tobalance' => $date_tobalance,
+            'status' => 0,
             'created_at' => $this->utc_time,
             'updated_at' => $this->utc_time,
         );
@@ -92,6 +94,7 @@ class Temporayvacation extends MyController
     {
         $this->dataModule['id'] = $id;
         $model = new Sitefunction();
+
         $result = $model->get_single_row(TBL_TEMPORARY_VACATION, '*', array('id' => $id));
         $this->dataModule['temporayvacation'] = $result;
         echo view('temporayvacation/temporayvacation_edit', $this->dataModule);
@@ -112,11 +115,11 @@ class Temporayvacation extends MyController
         $mobile_no = $requestData->mobile_no;
         $deposit = $requestData->deposit;
         $mess_balance = $requestData->mess_balance;
-        $receipt_no_mess = $requestData->receipt_no_mess;
-        $date_mess = $requestData->date_mess;
+      //  $receipt_no_mess = $requestData->receipt_no_mess;
+       // $date_mess = $requestData->date_mess;
         $total_balance = $requestData->total_balance;
-        $receipt_no_tobalance= $requestData->receipt_no_tobalance;
-        $date_tobalance = $requestData->date_tobalance;
+       // $receipt_no_tobalance= $requestData->receipt_no_tobalance;
+       // $date_tobalance = $requestData->date_tobalance;
 
         $data = array(
             'name' => $name,
@@ -129,11 +132,11 @@ class Temporayvacation extends MyController
             'mobile_no'=>$mobile_no,
             'deposit' => $deposit,
             'mess_balance' => $mess_balance,
-            'receipt_no_mess' => $receipt_no_mess,
-            'date_mess'=>$date_mess,
+           // 'receipt_no_mess' => $receipt_no_mess,
+           // 'date_mess'=>$date_mess,
             'total_balance' => $total_balance,
-            'receipt_no_tobalance' => $receipt_no_tobalance,
-            'date_tobalance' => $date_tobalance,
+           // 'receipt_no_tobalance' => $receipt_no_tobalance,
+            //'date_tobalance' => $date_tobalance,
             'status' => 1,
             'created_at' => $this->utc_time,
             'updated_at' => $this->utc_time,
@@ -150,5 +153,32 @@ class Temporayvacation extends MyController
         }
         return $this->respond($this->dataModule);
 
+    }
+
+
+    public function change_visibility()
+    {
+        $requestData = $this->request->getJson();
+        $id = $requestData->id;
+        $status = $requestData->status;
+        $model = new Sitefunction();
+        $model->protect(false);
+        $data_array = array('status' => $status, 'updated_at' => $this->utc_time);
+        $model->update_data(TBL_TEMPORARY_VACATION, $data_array, array('id' => $id));
+        $data = array(
+            'message' => 'Student Temporary Vacation status updated Successfully '
+        );
+        $this->dataModule = $this->success($data);
+        return $this->respond($this->dataModule);
+    }
+  
+
+    public function view($id)
+    {
+        $this->dataModule['id'] = $id;
+        $model = new Sitefunction();
+        $result = $model->get_single_row(TBL_USER_REGISTRATION, '*', array('id' => $id));
+        $this->dataModule['studentView'] = $result;
+        echo view('temporayvacation/view', $this->dataModule);
     }
 }

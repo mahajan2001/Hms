@@ -1,23 +1,24 @@
 <?php include(INCLUDESPATH . '/header.php'); ?>
 <?php include(INCLUDESPATH . '/sidebar.php'); ?>
 <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
 
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-            width: 10%;
-        }
+    th,
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        width: 10%;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
 <div class="content-wrap">
     <div class="main">
         <div class="container-fluid">
@@ -62,9 +63,9 @@
                                     </div>
                                     <?php
                                 } ?>
-                                <h1>TEMPORAY VACATION</h1>
+                                <h1>TEMPORARY VACATION</h1>
                                 <br>
-                                
+
                                 <table>
                                     <thead>
                                         <tr>
@@ -78,22 +79,72 @@
                                         <!-- Rows -->
                                         <tr>
                                             <td>Name of the Student</td>
-                                            <td colspan="3"><input class="form-control"id="name"  ></td>
-                                            
+                                           
+                                            <td colspan="3">
+                                                <select id="name" class="form-control required"
+                                                    name="name" placeholder="Select the student namer">
+                                                    <option value=""></option>
+                                                   
+                                                    <?php
+                                                foreach ($student as $key => $value) {
+                                                    ?>
+                                                    <option value="<?php echo $value['id']; ?>">
+                                                        <?php echo $value['name']; ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                ?>
+
+                                                </select>
+                                                <span id="name_error_message" style="color:red"></span>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <td>Registration Number</td>
-                                            <td colspan="3"><input class="form-control" id="registration_no" ></td>
+                                            <td colspan="3">
+                                                <select id="registration_no" class="form-control required"
+                                                    name="registration_no" placeholder="Select the Registration No">
+                                                    <option value=""></option>
+                                                   
+                                                    <?php
+                                                foreach ($student as $key => $value) {
+                                                    ?>
+                                                    <option value="<?php echo $value['id']; ?>">
+                                                        <?php echo $value['student_id']; ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                ?>
+
+                                                </select>
+                                                <span id="registration_no_error_message" style="color:red"></span>
+                                            </td>
                                         </tr>
                                         <!-- Repeat this pattern for the remaining rows -->
                                         <!-- ... -->
                                         <tr>
                                             <td>Course</td>
-                                            <td colspan="3"><input class="form-control" id="course_type"></td>
+                                            <td colspan="3">
+                                                <select id="course_type" class="form-control required"
+                                                    name="course_type" placeholder="Select the Course">
+                                                    <option value=""></option>
+                                                    <option value="M.Tech">M.Tech</option>
+                                                    <option value="M.Sc">M.Sc</option>
+                                                    <option value="PhD">PhD</option>
+                                                    <option value="JRF">JRF</option>
+                                                    <option value="SRF">SRF</option>
+                                                    <option value="PA</">PA</option>
+                                                    <option value="RA</">RA</option>
+                                                    <option value="Intern">Intern</option>
+                                                    <option value="TA</">TA</option>
+                                                </select>
+                                                <span id="course_type_error_message" style="color:red"></span>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Department</td>
-                                            <td colspan="3"><input class="form-control" id="department" ></td>
+                                            <td colspan="3"><input class="form-control" id="department"></td>
                                         </tr>
                                         <tr>
                                             <td>Date of Joining Hostel </td>
@@ -109,33 +160,47 @@
                                         </tr>
                                         <tr>
                                             <td>Mobile Number</td>
-                                            <td colspan="3"><input class="form-control"  id="mobile_no"></td>
+                                            <td colspan="3">
+                                                <select id="mobile_no" class="form-control required"
+                                                    name="mobile_no" placeholder="Select the Mobile Number">
+                                                    <option value=""></option>
+                                                   
+                                                    <?php
+                                                foreach ($student as $key => $value) {
+                                                    ?>
+                                                    <option value="<?php echo $value['id']; ?>">
+                                                        <?php echo $value['mobile_no']; ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                ?>
+
+                                                </select>
+                                                <span id="mobile_no_error_message" style="color:red"></span>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td >Security Deposit, Amount, Rs(A)</td>
-                                            <td colspan="3"><input class="form-control" id="deposit" ></td>
+                                            <td>Security Deposit, Amount, Rs(A)</td>
+                                            <td colspan="3"><input class="form-control" id="deposit"></td>
                                         </tr>
                                         <tr>
-                                            <td >Mess Balance (IF ANY)</td>
-                                            <td collapse="4">Rs:<input class="form-control" id="mess_balance" ></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_mess"></td>
-                                            <td collapse="1">Date:<input class="form-control" type="date" id="date_mess"></td>
+                                            <td>Mess Balance (IF ANY)</td>
+                                            <td collapse="4"><input class="form-control" id="mess_balance"></td>
+
                                         </tr>
                                         <tr>
                                             <td id="totalnalance">Total Balance</td>
-                                            <td collapse="4">Rs:<input class="form-control" id="total_balance"></td>
-                                            <td collapse="1">Receipt No:<input class="form-control" id="receipt_no_tobalance"></td>
-                                            <td collapse="1">Date:<input class="form-control" type="date" id="date_tobalance"></td>
+                                            <td collapse="4"><input class="form-control" id="total_balance"></td>
+
                                         </tr>
                                     </tbody>
                                 </table>
-                                 <br>
+                                <br>
                                 <h3>DECLARATION BY THE HOSTEL RESIDENT</h3>
                                 <br>
-                                <p> 1.I have read the Refund Rules Published by DIAT(DU),pune at the time of submission of this form.</p>
-                                <p>2.In View of the above,I request HMS to Stop Billing temporarily. </p>
+                                <p>1.In View of the above,I request HMS to Stop Billing temporarily. </p>
                             </div>
-                             <br>
+                            <br>
                             <div class="form-group">
                                 <button id="submitButton" onclick="return adddata()"
                                     class="btn btn-outline-primary float-right">SAVE</button>
@@ -151,9 +216,9 @@
 </div><!-- /# content wrap -->
 <script>
 
-                            
 
-    
+
+
     function adddata() {
         var name = $("#name").val();
         var registration_no = $("#registration_no").val();
@@ -165,12 +230,12 @@
         var mobile_no = $("#mobile_no").val();
         var deposit = $("#deposit").val();
         var mess_balance = $("#mess_balance").val();
-        var receipt_no_mess = $("#receipt_no_mess").val();
-        var date_mess = $("#date_mess").val();
+       // var receipt_no_mess = $("#receipt_no_mess").val();
+       // var date_mess = $("#date_mess").val();
         var total_balance = $("#total_balance").val();
-        var receipt_no_tobalance = $("#receipt_no_tobalance").val();
-        var date_tobalance = $("#date_tobalance").val();
-        
+      //  var receipt_no_tobalance = $("#receipt_no_tobalance").val();
+      //  var date_tobalance = $("#date_tobalance").val();
+
         $.ajax({
             url: " <?= TEMPORAYVACATION_PATH ?>/addtemporayvacation ",
             type: "POST",
@@ -182,16 +247,16 @@
                 "course_type": course_type,
                 "department": department,
                 "js_date": js_date,
-                "room_no":room_no,
+                "room_no": room_no,
                 "tvh_date": tvh_date,
                 "mobile_no": mobile_no,
                 "deposit": deposit,
                 "mess_balance": mess_balance,
-                "receipt_no_mess": receipt_no_mess,
-                "date_mess": date_mess,
+                //"receipt_no_mess": receipt_no_mess,
+                //"date_mess": date_mess,
                 "total_balance": total_balance,
-                "receipt_no_tobalance": receipt_no_tobalance,
-                "date_tobalance": date_tobalance,
+               // "receipt_no_tobalance": receipt_no_tobalance,
+               // "date_tobalance": date_tobalance,
             }),
             success: function (data) {
                 if (data.success == true) {

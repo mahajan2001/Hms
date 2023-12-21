@@ -68,6 +68,7 @@
                                             <th>Deposit</th>
                                             <th>Mess Balance</th>
                                             <th>Total Balance</th>
+                                            <th>Action</th>
                                             <th>Update</th>
                                             <th>View</th>
                                         </tr>
@@ -86,10 +87,17 @@
                                                     <td><?= $row['deposit'] ?></td>
                                                     <td><?= $row['mess_balance'] ?></td>
                                                     <td><?= $row['total_balance'] ?></td>
-                                                    
+                                                    <td>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="status_change ct_switch" data-id="<?= $row['id'] ?>" value="<?= $row['status'] ?>" <?= $row['status'] == 1 ? "checked" : "" ?>>
+                                                                <span class="slider round"></span>
+                                                            </label>
+                                                        </div>  
+                                                    </td>
                                                     <td>&nbsp;&nbsp;<a class="fa-solid fa-pen-to-square text-blue" data-toggle="tooltip" title="Edit Guest!" href="<?= PERMANENTVACATION_PATH ?>/edit/<?= $row["id"]; ?>"></a>
                                                     </td>
-                                                    <td>&nbsp;&nbsp;<a class="fa-solid fa-eye text-green" data-toggle="tooltip" title="View Guest!" href="<?= PERMANENTVACATION_PATH ?>/edit/<?= $row["id"]; ?>"></a></td>
+                                                    <td>&nbsp;&nbsp;<a class="fa-solid fa-eye text-green" data-toggle="tooltip" title="View Guest!" href="<?= PERMANENTVACATION_PATH ?>/view/<?= $row["id"]; ?>"></a></td>
 
                                                 </tr>
                                         <?php
@@ -123,7 +131,7 @@
         var id = $(this).attr('data-id');
         $.ajax({
             type: "POST",
-            url: "<?= USER_PATH ?>/change_visibility",
+            url: "<?= PERMANENTVACATION_PATH ?>/change_visibility",
             data: JSON.stringify({
                 'id': id,
                 'status': visibility

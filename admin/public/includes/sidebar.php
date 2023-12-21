@@ -9,9 +9,13 @@
                         <!-- <li><a href="<?= OFFICER_PATH ?>"><i class="fa fa-user"></i>Officers<span></span></a></li> -->
                         <!-- <li><a href="<?= OFFICER_PATH ?>/fetchGuests"><i class="fa fa-user"></i>Guests<span></span></a> -->
                         <!-- <li><a href="<?= VENDOR_PATH ?>"><i class="fa fa-user"></i>Vendor<span></span></a></li> -->
-                        <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
-                        <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay vacation</a></li>
-                        <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent vacation</a></li>
+                        <!-- <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
+                        <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
+                        <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
+                        <li><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
+                        <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
+                        <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li> -->
+
                     </ul>
                 </li>
                 
@@ -42,6 +46,13 @@
                 <li><a href="<?= MASTER_PATH ?>"><i class="fa fa-cogs"></i>Master Settings</a></li> -->
                 <!-- <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
                 <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li> -->
+
+                      <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
+                        <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
+                        <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
+                        <li><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
+                        <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
+                        <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li>
             </ul>
         </div>
     </div>

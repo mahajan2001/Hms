@@ -308,64 +308,64 @@
                                 <h1>SECTION 3: DECLARATION BY HOSTEL RESIDENT </h1>
                                 <br>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox1" >
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox1" > -->
                                     <label for="hostelRulesCheckbox">
-                                        I have gone through, fully understood, and agree to obey all the DIAT (DU)
+                                       1. I have gone through, fully understood, and agree to obey all the DIAT (DU)
                                         Hostel Rules and Regulations available on
                                         <a href="https://www.diat.ac.in" target="_blank">www.diat.ac.in</a> under
                                         Hostels Portal with letter and spirit.
                                     </label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox2">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox2"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that, DIAT(DU) Hostel Rules and REgulation subjext to change from
+                                      2. I am aware that, DIAT(DU) Hostel Rules and REgulation subjext to change from
                                         time-to-time during my stay.
                                     </label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox3">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox3"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that, essential facilities are created that makes my comfortable stay
+                                      3. I am aware that, essential facilities are created that makes my comfortable stay
                                         in the hostels.
                                     </label>
                                 </p>
 
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox4">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox4"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that,outside food will not be permitted to the hostel rooms and it is
+                                       4. I am aware that,outside food will not be permitted to the hostel rooms and it is
                                         only perimitted up to the dining halls.
                                     </label>
                                 </p>
 
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox5">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox5"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that,I need to mandatorily enter my movement in the movement register
+                                      5. I am aware that,I need to mandatorily enter my movement in the movement register
                                         kept in the hostels and I will do the same.
                                     </label>
                                 </p>
 
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox6">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox6"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I will always cooperate with the Institute/Hostel staff and I will not
+                                      5. I will always cooperate with the Institute/Hostel staff and I will not
                                         mis-behave with the Hostel Wardens,and staff members or any other person working
                                         in the hostels.
                                     </label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox7">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox7"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that, I will be responsible for the safeguard of all my belongings in
+                                      6. I am aware that, I will be responsible for the safeguard of all my belongings in
                                         the hostel/Institue.
                                     </label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox8">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox8"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I will come back to the hostel before the prescribed time as notified by the
+                                       7. I will come back to the hostel before the prescribed time as notified by the
                                         hostel management.
                                         I am also aware that during my outing period, I am responsible for my safety and
                                         security, and the Institute
@@ -378,21 +378,21 @@
                                 </p>
 
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox9">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox9"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I will be inside the hostel by 10.00 PM on any day, which may be extended with
+                                       8. I will be inside the hostel by 10.00 PM on any day, which may be extended with
                                         the prior permission from the warden. </label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox10">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox10"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I am aware that, on repeated late arrival to the hostel after outing, I may be
+                                       9. I am aware that, on repeated late arrival to the hostel after outing, I may be
                                         suspended/expelled from the hostel/Institute.
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox11">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox11"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I will not indulage in gambling, smoking, consuming liquor,narcoti drugs or any
+                                      10. I will not indulage in gambling, smoking, consuming liquor,narcoti drugs or any
                                         other intoxicants inside/ outside of the hostel/Institute.
                                         If I am found in such intoxicated condition, I will accept any punishment
                                         imposed by the hostel management/institute authorities including expulsion from
@@ -400,18 +400,23 @@
                                         and or rustication from the Institue.
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox12">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox12"> -->
                                     <label for="hostelRulesCheckbox">
-                                        I will not spread any kind unauthorized data(text/audio/video etc.,) across the
+                                       11. I will not spread any kind unauthorized data(text/audio/video etc.,) across the
                                         social media platfoems(like Twitter/Facebook/WhatsApp etc.,)
                                         against the hostels/Institute which can downgrade the reputation of
                                         DIAT(DU),pune
                                 </p>
                                 <p>
-                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox13">
+                                    <!-- <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox13"> -->
                                     <label for="hostelRulesCheckbox">
-                                        For any problems in Hostel/Mess, I will approach the Hostel Wardens/Hostel Staff
+                                       12. For any problems in Hostel/Mess, I will approach the Hostel Wardens/Hostel Staff
                                         through proper channel and I will abide to the hierarchy.
+                                </p>
+                                <p>
+                                    <input type="checkbox" onchange="updateButtonState()" id="hostelRulesCheckbox">
+                                    <label for="hostelRulesCheckbox">
+                                       Agree to all.
                                 </p>
                             </div>
 
@@ -577,26 +582,11 @@
 <script>
     // Function to update button state based on checkbox status
     function updateButtonState() {
-      var hostelRulesCheckbox1 = document.getElementById('hostelRulesCheckbox1');
-      var hostelRulesCheckbox2 = document.getElementById('hostelRulesCheckbox2');
-      var hostelRulesCheckbox3 = document.getElementById('hostelRulesCheckbox3');
-      var hostelRulesCheckbox4 = document.getElementById('hostelRulesCheckbox4');
-      var hostelRulesCheckbox5 = document.getElementById('hostelRulesCheckbox5');
-      var hostelRulesCheckbox6 = document.getElementById('hostelRulesCheckbox6');
-      var hostelRulesCheckbox7 = document.getElementById('hostelRulesCheckbox7');
-      var hostelRulesCheckbox8 = document.getElementById('hostelRulesCheckbox8');
-      var hostelRulesCheckbox9 = document.getElementById('hostelRulesCheckbox9');
-      var hostelRulesCheckbox10 = document.getElementById('hostelRulesCheckbox10');
-      var hostelRulesCheckbox11 = document.getElementById('hostelRulesCheckbox11');
-      var hostelRulesCheckbox12 = document.getElementById('hostelRulesCheckbox12');
-      var hostelRulesCheckbox13 = document.getElementById('hostelRulesCheckbox13');
+      var hostelRulesCheckbox = document.getElementById('hostelRulesCheckbox');
       var submitButton = document.getElementById('submitButton');
 
       // Enable the button only if at least one checkbox is checked
-      if (hostelRulesCheckbox1.checked && hostelRulesCheckbox2.checked && hostelRulesCheckbox3.checked 
-    &&hostelRulesCheckbox4.checked && hostelRulesCheckbox5.checked &&hostelRulesCheckbox6.checked && hostelRulesCheckbox7.checked &&
-    hostelRulesCheckbox8.checked && hostelRulesCheckbox9.checked && hostelRulesCheckbox10.checked &&hostelRulesCheckbox11.checked &&
-    hostelRulesCheckbox12.checked && hostelRulesCheckbox13.checked ) {
+      if (hostelRulesCheckbox.checked ) {
         submitButton.disabled = false;
       } else {
         submitButton.disabled = true;
