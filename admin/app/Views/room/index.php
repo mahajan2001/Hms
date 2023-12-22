@@ -60,8 +60,9 @@
                                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
+                                            <th>SrNo</th>
                                             <th>Hostel Block</th>
+                                            <th>Room Number</th>
                                             <th>No of Beds</th>
                                             <th>Hostel Floor</th>
                                             <th>Update</th>
@@ -74,9 +75,10 @@
                                             foreach ($room as $row) { ?>
                                                 <tr>
                                                     <td><?= $row['id'] ?></td>
-                                                    <td><?= $row['block_id'] ?></td>
+                                                    <td><?= $row['block'] ?></td>
+                                                    <td><?= $row['room_no'] ?></td>
                                                     <td><?= $row['no_of_beds'] ?></td>
-                                                    <td><?= $row['floor_no'] ?></td>
+                                                    <td><?= $row['floor_type'] ?></td>
 
                                                     <td>&nbsp;&nbsp;<a class="fa-solid fa-pen-to-square text-blue" data-toggle="tooltip" title="Edit Guest!" href="<?= ROOM_PATH ?>/edit/<?= $row["id"]; ?>"></a>
                                                     </td>

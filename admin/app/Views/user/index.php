@@ -69,6 +69,7 @@
                                             <th>Phone Number</th>
                                             <th>Aadhar Number</th>
                                             <th>Course</th>
+                                            <th>Department Name</th>
                                             <th>Action</th>
                                             <th>Update</th>
                                             <th>View</th>
@@ -87,6 +88,7 @@
                                                     <td><?= $row['mobile_no'] ?></td>
                                                     <td>XXXX XXXX <?= substr($row['aadhar_no'], 8)  ?></td>
                                                     <td><?= $row['course_type'] ?></td>
+                                                    <td><?= $row['diat_dep_name'] ?></td>
                                                     <td>
                                                         <div>
                                                             <label class="switch">

@@ -51,7 +51,7 @@
                                         <div class="form-group">
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Name</label>
-                                            <select id="hostel_name" class="form-control required" name="hostel_name"
+                                            <select id="hostel_id" class="form-control required" name="hostel_id"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
 
@@ -74,7 +74,7 @@
                                             <label>Hostel Block</label>
                                             <select id="hostel_block" class="form-control required" name="hostel_block"
                                                 data-none-selected-text="Non Selected"
-                                                value="<?php echo $room['block_id']; ?>">
+                                                value="<?php echo $room['block']; ?>">
                                                 <option value="">Non Selected</option>
                                             </select>
                                             <span id="hotel_block_error_message" style="color:red"></span>
@@ -88,7 +88,7 @@
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Floor</label>
                                             <select id="hostel_floor" class="form-control required" name="hostel_floor"
-                                                value="<?php echo $room['floor_no']; ?>"
+                                                value="<?php echo $room['floor_type']; ?>"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
                                                 <option value="1">1St Floor</option>
@@ -180,6 +180,7 @@
 
     function edit() {
         var id = <?php echo $room['id']; ?>;
+        var hostel_id =  $("#hostel_id").val();
         var hostel_block = $("#hostel_block").val();
         var hostel_floor = $("#hostel_floor").val();
         var no_of_bed = $("#no_of_bed").val();
@@ -192,6 +193,7 @@
             crossDomain: true,
             data: JSON.stringify({
                 "id": id,
+                "hostel_id" :hostel_id,
                 "hostel_block": hostel_block,
                 "hostel_floor": hostel_floor,
                 "no_of_bed": no_of_bed,

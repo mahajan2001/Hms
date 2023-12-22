@@ -224,47 +224,43 @@ class User extends MyController
             $transaction_result = $model->get_single_row(TBL_TRANSACTION, '*', array('student_id' => $result['student_id']));
             if(sizeof($transaction_result) == 0){
 
-            // $generatedPassword = $this->generateRandomPassword();
-            // $to = $result['gmail'];
-            // $subject = "Login Credentials";
-            // $message = "Your Registration is successfull. Below are your login credentials<br> Email: ".$to." <br>Password: ". $generatedPassword . "";
-            // $headers = "From: demo45547@gmail.com";
-            // $model = new Sitefunction();
-            // $model->protect(false);
-            // $data_array = array('password' => $this->encrypt_password($generatedPassword), 'updated_at' => $this->utc_time);
-            // $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
-            // mail($to, $subject, $message, $headers);
+            //Send login credentials to student via mail
+            
+            $generatedPassword = $this->generateRandomPassword();
+            $to = $result['gmail'];
+            $subject = "Login Credentials";
+            $message = "Your Registration is successfull. Below are your login credentials<br> Email: ".$to." <br>Password: ". $generatedPassword . "";
+            $headers = "From: demo45547@gmail.com";
+            $model = new Sitefunction();
+            $model->protect(false);
+            $data_array = array('password' => $this->encrypt_password($generatedPassword), 'updated_at' => $this->utc_time);
+            $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
+            mail($to, $subject, $message, $headers);
+            $this->sendmailtouser($to, $subject, $message);
 
-
-            // $this->sendmailtouser($to, $subject, $message);
+            //RooM Allocation
                 if($result['gender'] == 'M'){
                     
-                    //Ganga and Yamuna
+                    //Ganga and Krishna
 
                     $model = new Sitefunction();
-                    $join = array(
-                        TBL_BEDS . ' as b' => 'b.room_id=r.id',
+                    $where = array(
+                        'r.hostel_id' => 1,
+                        'r.block != ' => 'A',
                     );
-                    $whereCommon = array(
-                        'r.hostel_id' => 1, 
-                        'b.is_available' => 1
-                    );
-                    $whereBoys = array_merge($whereCommon, array('r.block' => array('B', 'C')));
-                    $fetch_room_boys  = $model->get_all_rows(TBL_ROOM . ' as r', 'b.*,r.hostel_id', $whereBoys, $join);
+                    $fetch_room_boys_godavari  = $model->get_all_rows(TBL_ROOM . ' as r', 'r.*', $where);
 
-
-                    if(sizeof($fetch_room_boys) > 0){
-
+                    if(sizeof($fetch_room_boys_godavari) > 0){
                         $model = new Sitefunction();
                         $model->protect(false);
-                        $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_boys[0]['id']));
-                        
+                        $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_boys_godavari[0]['id']));
+
                         $currentDate = new \DateTime();
                         $currentDate->modify('+6 months');
-                     
+
                         $data_to_insert = array(
                             'student_id' => $result['student_id'],
-                            'bed_id' => $fetch_room_boys[0]['id'],
+                            'bed_id' => $fetch_room_boys_godavari[0]['id'],
                             'start_date' => $this->utc_time,
                             'end_date' => $currentDate->format('Y-m-d'),
                             'status' => 1,
@@ -276,15 +272,47 @@ class User extends MyController
                         $model->insert_data(TBL_TRANSACTION, $data_to_insert);
 
                         $model = new Sitefunction();
-                        $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys[0]['hostel_id']));
+                        $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
 
                         $model = new Sitefunction();
                         $model->protect(false);
-                        $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys[0]['hostel_id']));
+                        $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
+                        
+                    }else{
+                        $model = new Sitefunction();
+                        $where = array(
+                            'r.hostel_id' => 2,
+                        );
+                        $fetch_room_boys_krishna  = $model->get_all_rows(TBL_ROOM . ' as r', 'r.*', $where);
+                        if(sizeof($fetch_room_boys_krishna) > 0){
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_boys_krishna[0]['id']));
+
+                            $currentDate = new \DateTime();
+                            $currentDate->modify('+6 months');
+
+                            $data_to_insert = array(
+                                'student_id' => $result['student_id'],
+                                'bed_id' => $fetch_room_boys_krishna[0]['id'],
+                                'start_date' => $this->utc_time,
+                                'end_date' => $currentDate->format('Y-m-d'),
+                                'status' => 1,
+                                'updated' => $this->utc_time
+                            );
+
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->insert_data(TBL_TRANSACTION, $data_to_insert);
+
+                            $model = new Sitefunction();
+                            $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+                        }
                     }
-                    
-                ////belowcode
-                    
                 }else if($result['gender'] == 'F'){
                     //Ganga A Block
                     //Fetch Ganga A block beds
@@ -299,13 +327,13 @@ class User extends MyController
                     );
                     $fetch_room_girls = $model->get_all_rows(TBL_ROOM . ' as r', 'b.*,r.hostel_id', $where,$join);
                     // echo json_encode($fetch_room_girls);
+
                     if(sizeof($fetch_room_girls) > 0){
 
                         $model = new Sitefunction();
                         $model->protect(false);
                         $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_girls[0]['id']));
 
-                        
                         $currentDate = new \DateTime();
                         $currentDate->modify('+6 months');
 
@@ -317,6 +345,7 @@ class User extends MyController
                             'status' => 1,
                             'updated' => $this->utc_time
                         );
+
                         $model = new Sitefunction();
                         $model->protect(false);
                         $model->insert_data(TBL_TRANSACTION, $data_to_insert);
@@ -332,10 +361,10 @@ class User extends MyController
             }
             
         }
-        // $model = new Sitefunction();
-        // $model->protect(false);
-        // $data_array = array('status' => $status, 'updated_at' => $this->utc_time);
-        // $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
+        $model = new Sitefunction();
+        $model->protect(false);
+        $data_array = array('status' => $status, 'updated_at' => $this->utc_time);
+        $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
         $data = array(
             'message' => 'Student status updated Successfully '
         );

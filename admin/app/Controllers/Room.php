@@ -62,6 +62,7 @@ class Room extends MyController
     public function addroom()
     {
         $requestData = $this->request->getJson();
+        $hostel_id =  $requestData->hostel_id;
         $hostel_block = $requestData->hostel_block;
         $hostel_floor = $requestData->hostel_floor;
         $no_of_bed = $requestData->no_of_bed;
@@ -69,8 +70,9 @@ class Room extends MyController
 
         $model = new Sitefunction();
         $data = array(
-            'block_id' => $hostel_block,
-            'floor_no' => $hostel_floor,
+            'hostel_id'=>$hostel_id,
+            'block' => $hostel_block,
+            'floor_type' => $hostel_floor,
             'no_of_beds' => $no_of_bed,
             'room_no'  => $room_number,
             
@@ -109,6 +111,7 @@ class Room extends MyController
     {
         $requestData = $this->request->getJson();
         $id = $requestData->id;
+        $hostel_id =  $requestData->hostel_id;
         $hostel_block = $requestData->hostel_block;
         $hostel_floor = $requestData->hostel_floor;
         $no_of_bed = $requestData->no_of_bed;
@@ -116,8 +119,9 @@ class Room extends MyController
 
 
         $data = array(
-            'block_id' => $hostel_block,
-            'floor_no' => $hostel_floor,
+            'hostel_id'=>$hostel_id,
+            'block' => $hostel_block,
+            'floor_type' => $hostel_floor,
             'no_of_beds' => $no_of_bed,
             'room_no'  => $room_number,
             

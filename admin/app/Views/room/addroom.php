@@ -51,7 +51,7 @@
                                         <div class="form-group">
                                             <small class="req text-danger">* </small>
                                             <label>Hostel Name</label>
-                                            <select id="hostel_name" class="form-control required" name="hostel_name"
+                                            <select id="hostel_id" class="form-control required" name="hostel_id"
                                                 data-none-selected-text="Non Selected">
                                                 <option value="">Non Selected</option>
 
@@ -172,6 +172,7 @@
 
 
         function adddata() {
+            var hostel_id = $("#hostel_id").val();
             var hostel_block = $("#hostel_block").val();
             var hostel_floor = $("#hostel_floor").val();
             var no_of_bed = $("#no_of_bed").val();
@@ -183,6 +184,7 @@
                 datatype: "json",
                 crossDomain: true,
                 data: JSON.stringify({
+                    "hostel_id" : hostel_id,
                     "hostel_block": hostel_block,
                     "hostel_floor": hostel_floor,
                     "no_of_bed": no_of_bed,
