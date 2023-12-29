@@ -27,7 +27,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Add Temporary Vacation</h1>
+                            <h1>Mess Rebate</h1>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                             <ol class="breadcrumb text-right float-right">
                                 <li><a href="<?= USER_PATH ?>">Add Temporary Vacation &nbsp; </a></li>
                                 / &nbsp;
-                                <li><a>Add Temporary Vacation</a></li>
+                                <li><a>Mess Rebate</a></li>
                                 <!--	<li class="active">Data Table</li>-->
                             </ol>
                         </div>
@@ -94,8 +94,8 @@
                                     8.Backdated Rebate will not be considered. <br>
                                     9.I have read all the above conditions. <br>
 
-                                    I Agree <input type="checkbox" id="myCheckbox" name="myCheckbox"
-                                        value="checkboxValue">
+                                    <!--I Agree <input type="checkbox" id="myCheckbox" name="myCheckbox"-->
+                                    <!--    value="checkboxValue">-->
 
                                 <p style="text-align: right;">
                                     Signature of Student
@@ -121,34 +121,34 @@
                                         <tr>
                                             <td>Name of the Student</td>
                                             <td colspan="3">
-                                                <span id="name_error_message" style="color:red"></span>
+                                                <span id="name_error_message" ><?php echo $mess_rebate_Details['name']; ?></span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Enrollment Number</td>
                                             <td colspan="3">
-                                                <span id="enrollment_number_error_message" style="color:red"></span>
+                                                <span id="enrollment_number_error_message" ><?php echo $mess_rebate_Details['id']; ?></span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>Course Name</td>
                                             <td colspan="3">
-                                                <span id="course_type_error_message" style="color:red"></span>
+                                                <span id="course_type_error_message" ><?php echo $mess_rebate_Details['course_type']; ?></span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>Room Number</td>
                                             <td colspan="3">
-                                                <span id="room_no_error_message" style="color:red"></span>
+                                                <span id="room_no_error_message" ><?php echo $mess_rebate_Details['room_no']; ?></span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>Mobile Number</td>
                                             <td colspan="3">
-                                                <span id="mobile_no_error_message" style="color:red"></span>
+                                                <span id="mobile_no_error_message" ><?php echo $mess_rebate_Details['mobile_no']; ?></span>
                                             </td>
                                         </tr>
                                         
@@ -166,9 +166,19 @@
                                         </tr>
                                     </thead>
                                     <tr>
-                                        <td><input type="date" placeholder="Enter your text"></td>
-                                        <td><input type="date" placeholder="Enter your text"></td>
-                                        <td><input type="text" placeholder="Enter no of days"></td>
+                                        <?php 
+                                        $start_date = DateTime::createFromFormat('d/m/Y', $mess_rebate_Details['start_date']);
+                                        // Convert to the format 'yyyy-mm-dd'
+                                        $formatted_start_date = $start_date ? $start_date->format('Y-m-d') : '';
+                                        
+                                        $end_date = DateTime::createFromFormat('d/m/Y', $mess_rebate_Details['end_date']);
+                                        // Convert to the format 'yyyy-mm-dd'
+                                        $formatted_end_date = $end_date ? $end_date->format('Y-m-d') : '';
+                                        
+                                        ?>
+                                        <td><input type="date" value="<?php echo $formatted_start_date; ?>" placeholder="Enter your text"></td>
+                                        <td><input type="date"  value="<?php echo $formatted_end_date; ?>" placeholder="Enter your text"></td>
+                                        <td><input type="text"  value="<?php echo $mess_rebate_Details['no_of_days']; ?>" placeholder="Enter no of days"></td>
                                     </tr>
                                 </table>
                                 <br>
@@ -176,8 +186,7 @@
                                 <div class="form-group">
                                         <label>REASON FOR SEEKING REBATE</label>
                                         <div class="custom-file">
-                                            <input name="image" type="file" class="custom-file-input" id="image">
-                                            <label class="custom-file-label" for="customFile">Select Document</label>
+                                            <a href="<?php echo FETCH_IMAGE . 'user/' . $mess_rebate_Details['image']; ?>" download="<?php echo $mess_rebate_Details['image']; ?>"><?php echo $mess_rebate_Details['image']; ?></a>
                                         </div>
                                         <span id="image_error_message" style="color:red"></span>
                                     </div>   
@@ -185,10 +194,10 @@
                                 <br><br>
                             </div>
                             <br>
-                            <div class="form-group">
-                                <button id="submitButton" onclick="return adddata()"
-                                    class="btn btn-outline-primary float-right">SAVE</button>
-                            </div>
+                            <!--<div class="form-group">-->
+                            <!--    <button id="submitButton" onclick="return adddata()"-->
+                            <!--        class="btn btn-outline-primary float-right">SAVE</button>-->
+                            <!--</div>-->
 
                             </table>
                         </div><!-- /# card -->

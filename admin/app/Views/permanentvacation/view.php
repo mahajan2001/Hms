@@ -106,7 +106,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""><strong>Full Name of Student </strong> </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -125,7 +125,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Registration No.</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['registration_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -144,7 +144,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Course M.Tech/PhD/JSF/SRF/RA/PA</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['course_type'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -163,7 +163,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Department</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['department'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -183,7 +183,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>Date of Joining Hostel</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['joining_date'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -203,7 +203,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong> Room No.</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['room_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -225,7 +225,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>Date of Temporary Vacation of Hostel</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['permanent_vacation_date'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -244,7 +244,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Mobile No.</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['mobile_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -264,7 +264,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>SECURITY DEPOSIT , Amount, Rs.(A)</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['deposit'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -286,7 +286,7 @@
                                                             &nbsp; &nbsp; &nbsp; &nbsp; (B)</strong> <br>
                                                         <p>(Information filled by the HMC staff)</p>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $perView['mess_balance'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -304,7 +304,7 @@
                                                 </tr>
                                                 <tr class="header-section">
                                                     <td class=""> <strong>TOTAL BALANCE (C)</strong></td>
-                                                    <td style="border-right: hidden">Rs.</td>
+                                                    <td style="border-right: hidden">Rs. <?= $perView['total_balance'] ?> </td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -345,7 +345,7 @@
                                             <body>
                                                 <tr class="section2">
                                                     <td class=""><strong>Student of Account Holder</strong> </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $perView['account_name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -364,7 +364,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Bank Account Number</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $perView['bankaccount_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -383,7 +383,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Name of the Bank</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $perView['bank_name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -402,7 +402,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Name of the Branch</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $perView['branch_name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -421,7 +421,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Branch IFSC Code</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $perView['ifsc_code'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>

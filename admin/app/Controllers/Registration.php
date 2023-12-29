@@ -381,8 +381,8 @@ class Registration extends MyController
             $room_no = 'NA';
         }
         
-        $date1 = \DateTime::createFromFormat('d/m/Y', $start_date);
-        $date2 = \DateTime::createFromFormat('d/m/Y', $end_date);
+        $date1 = \DateTime::createFromFormat('d-m-Y', $start_date);
+        $date2 = \DateTime::createFromFormat('d-m-Y', $end_date);
         $date1 = new \DateTime($date1->format('Y-m-d'));
         $date2 = new \DateTime($date2->format('Y-m-d'));
         

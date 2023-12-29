@@ -177,8 +177,8 @@ class Temporayvacation extends MyController
     {
         $this->dataModule['id'] = $id;
         $model = new Sitefunction();
-        $result = $model->get_single_row(TBL_USER_REGISTRATION, '*', array('id' => $id));
-        $this->dataModule['studentView'] = $result;
+        $result = $model->get_single_row(TBL_TEMPORARY_VACATION, '*', array('id' => $id));
+        $this->dataModule['tempView'] = $result;
         echo view('temporayvacation/view', $this->dataModule);
     }
 }

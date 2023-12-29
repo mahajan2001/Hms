@@ -25,9 +25,17 @@ class Rebateform extends MyController
 
     public function index()
     {
-        echo view('rebateform/add', $this->dataModule);  
+        // echo view('rebateform/add', $this->dataModule);  
+        $model = new Sitefunction();
+        $this->dataModule['mess_rebate'] = $model->get_all_rows(TBL_MESS_REBATE, '*');
+        echo view('rebateform/index', $this->dataModule); 
     }
-
-   
     
+    public function view($id)
+    {
+        // echo view('rebateform/add', $this->dataModule);  
+        $model = new Sitefunction();
+        $this->dataModule['mess_rebate_Details'] = $model->get_single_row(TBL_MESS_REBATE, '*' , array('id' => $id));
+        echo view('rebateform/add', $this->dataModule); 
+    }
 }

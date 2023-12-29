@@ -32,7 +32,7 @@
                         <div class="card alert">
 
                             <div class="bootstrap-data-table-panel">
-                                <a href="<?= PERMANENTVACATION_PATH ?>"
+                                <a href="<?= TEMPORAYVACATION_PATH ?>"
                                     class="btn btn-outline-danger float-end">BACK</a>
                                 <br><br>
                                 <div id="myDiv">
@@ -46,6 +46,25 @@
                                     </head>
 
                                     <body>
+
+                                        <img src="Hms\public\assets\images\DIAT.jpeg" alt="Military Hostel Logo"
+                                            style="float: right" />
+                                        <p colspan="4" style="">
+                                        <h3 style="color: #c0c0c0; text-align: center ;"> DEFENCE INSTITUTE OF ADVANCED
+                                            TECHNOLOGY(DU), PUNE - 411025</h3>
+                                        </p>
+                                        <h1 style="text-align: center;  text-decoration: underline;">
+                                            TEMPORARY VACATION</h1>
+
+                                        <p style="text-align: center"><strong>
+                                                All correspondences onlytohme@diat.ac.in</strong>
+                                        </p>
+                                        <h3 style="text-align: center">
+                                            (To be submitted to Hostel Office at the time of <b
+                                                style="text-decoration: underline;">TEMPORARY VACATION</b> of Hostel)
+                                        </h3>
+                                        <hr>
+                                        <table>
                                         <style>
                                             table {
                                                 border-collapse: collapse;
@@ -80,25 +99,7 @@
                                                 font-weight: bold;
                                             }
                                         </style>
-
-                                        <img src="Hms\public\assets\images\DIAT.jpeg" alt="Military Hostel Logo"
-                                            style="float: right" />
-                                        <p colspan="4" style="">
-                                        <h3 style="color: #c0c0c0; text-align: center ;"> DEFENCE INSTITUTE OF ADVANCED
-                                            TECHNOLOGY(DU), PUNE - 411025</h3>
-                                        </p>
-                                        <h1 style="text-align: center;  text-decoration: underline;">
-                                            TEMPORARY VACATION</h1>
-
-                                        <p style="text-align: center"><strong>
-                                                All correspondences onlytohme@diat.ac.in</strong>
-                                        </p>
-                                        <h3 style="text-align: center">
-                                            (To be submitted to Hostel Office at the time of <b
-                                                style="text-decoration: underline;">TEMPORARY VACATION</b> of Hostel)
-                                        </h3>
-                                        <hr>
-                                        <table>
+                                        
                                             <thead class="header-section1">
 
                                             </thead>
@@ -106,7 +107,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""><strong>Full Name of Student </strong> </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?php $tempView['name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -125,7 +126,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Registration No.</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"> <?= $tempView['registration_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -144,7 +145,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Course M.Tech/PhD/JSF/SRF/RA/PA</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['course_type'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -163,7 +164,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Department</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['department'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -183,7 +184,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>Date of Joining Hostel</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['joining_date'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -203,7 +204,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong> Room No.</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['room_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -225,7 +226,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>Date of Temporary Vacation of Hostel</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['temporary_vacation_date'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -244,7 +245,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""> <strong>Mobile No.</strong></td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['mobile_no'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -264,7 +265,7 @@
                                                 <tr class="section2">
                                                     <td class=""> <strong>SECURITY DEPOSIT , Amount, Rs.(A)</strong>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['deposit'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -286,7 +287,7 @@
                                                             &nbsp; &nbsp; &nbsp; &nbsp; (B)</strong> <br>
                                                         <p>(Information filled by the HMC staff)</p>
                                                     </td>
-                                                    <td style="border-right: hidden"></td>
+                                                    <td style="border-right: hidden"><?= $tempView['mess_balance'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
@@ -304,7 +305,7 @@
                                                 </tr>
                                                 <tr class="header-section">
                                                     <td class=""> <strong>TOTAL BALANCE (C)</strong></td>
-                                                    <td style="border-right: hidden">Rs.</td>
+                                                    <td style="border-right: hidden">Rs.<?= $tempView['total_balance'] ?>          </td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>

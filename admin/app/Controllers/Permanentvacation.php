@@ -197,8 +197,8 @@ class Permanentvacation extends MyController
     {
         $this->dataModule['id'] = $id;
         $model = new Sitefunction();
-        $result = $model->get_single_row(TBL_USER_REGISTRATION, '*', array('id' => $id));
-        $this->dataModule['studentView'] = $result;
+        $result = $model->get_single_row(TBL_PERMANENT_VACATION, '*', array('id' => $id));
+        $this->dataModule['perView'] = $result;
         echo view('permanentvacation/view', $this->dataModule);
     }
     
