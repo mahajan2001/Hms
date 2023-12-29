@@ -23,7 +23,7 @@ class Hostel extends MyController
 
     //Views
 
-    public function index()
+    public function index($id)
     {
         $model = new Sitefunction();
         $this->dataModule['hostel'] = $model->get_all_rows(TBL_BEDS, '*');

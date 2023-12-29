@@ -6,8 +6,6 @@ use App\Core\MyController;
 use App\Models\Sitefunction;
 use CodeIgniter\API\ResponseTrait;
 
-ini_set("SMTP", "localhost");
-ini_set("smtp_port", "25");
 class User extends MyController
 {
     use ResponseTrait;
@@ -223,22 +221,21 @@ class User extends MyController
             $model = new Sitefunction();
             $transaction_result = $model->get_single_row(TBL_TRANSACTION, '*', array('student_id' => $result['student_id']));
             if(sizeof($transaction_result) == 0){
-
-            //Send login credentials to student via mail
-            
-            $generatedPassword = $this->generateRandomPassword();
-            $to = $result['gmail'];
-            $subject = "Login Credentials";
-            $message = "Your Registration is successfull. Below are your login credentials<br> Email: ".$to." <br>Password: ". $generatedPassword . "";
-            $headers = "From: demo45547@gmail.com";
-            $model = new Sitefunction();
-            $model->protect(false);
-            $data_array = array('password' => $this->encrypt_password($generatedPassword), 'updated_at' => $this->utc_time);
-            $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
-            mail($to, $subject, $message, $headers);
-            $this->sendmailtouser($to, $subject, $message);
-
-            //RooM Allocation
+                //Send login credentials to student via mail
+                
+                $generatedPassword = $this->generateRandomPassword();
+                // $to = $result['gmail'];
+                $to = 'info@test.globalinfocloud.in';
+                $subject = "Login Credentials";
+                $message = "Your Registration is successfull. Below are your login credentials - Email: ".$to." , Password: ". $generatedPassword . "";
+                $headers = "From: info@test.globalinfocloud.in";
+                $model = new Sitefunction();
+                $model->protect(false);
+                $data_array = array('password' => $this->encrypt_password($generatedPassword), 'updated_at' => $this->utc_time);
+                $model->update_data(TBL_USER_REGISTRATION, $data_array, array('id' => $id));
+                mail($to, $subject, $message, $headers);
+                
+                //RooM Allocation
                 if($result['gender'] == 'M'){
                     
                     //Ganga and Krishna
@@ -249,34 +246,102 @@ class User extends MyController
                         'r.block != ' => 'A',
                     );
                     $fetch_room_boys_godavari  = $model->get_all_rows(TBL_ROOM . ' as r', 'r.*', $where);
-
+                    
                     if(sizeof($fetch_room_boys_godavari) > 0){
-                        $model = new Sitefunction();
-                        $model->protect(false);
-                        $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_boys_godavari[0]['id']));
-
-                        $currentDate = new \DateTime();
-                        $currentDate->modify('+6 months');
-
-                        $data_to_insert = array(
-                            'student_id' => $result['student_id'],
-                            'bed_id' => $fetch_room_boys_godavari[0]['id'],
-                            'start_date' => $this->utc_time,
-                            'end_date' => $currentDate->format('Y-m-d'),
-                            'status' => 1,
-                            'updated' => $this->utc_time
-                        );
-
-                        $model = new Sitefunction();
-                        $model->protect(false);
-                        $model->insert_data(TBL_TRANSACTION, $data_to_insert);
-
-                        $model = new Sitefunction();
-                        $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
-
-                        $model = new Sitefunction();
-                        $model->protect(false);
-                        $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
+                        
+                        //Check availability of beds in room
+                        $check_room_flag = true;
+                        $bed_id = 0;
+                        for($i = 0; $i < sizeof($fetch_room_boys_godavari); $i++){
+                            $model = new Sitefunction();
+                            $fetch_room_availability = $model->get_all_rows(TBL_BEDS , '*', array('room_id' => $fetch_room_boys_godavari[$i]['id'] , 'is_available' => 1));
+                            if(sizeof($fetch_room_availability) > 0){
+                                //Bed available in room so break loop and allocate bed id
+                                $check_room_flag = true;
+                                $bed_id = $fetch_room_availability[0]['id'];
+                                break;
+                            }else{
+                                $check_room_flag = false;
+                            }
+                        }
+                        if($check_room_flag == true){
+                            //Bed is available 
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->update_data(TBL_BEDS, array('is_available' => 0 , 'student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $bed_id));
+    
+                            $currentDate = new \DateTime();
+                            $currentDate->modify('+6 months');
+    
+                            $data_to_insert = array(
+                                'student_id' => $result['student_id'],
+                                'bed_id' => $bed_id,
+                                'start_date' => $this->utc_time,
+                                'end_date' => $currentDate->format('Y-m-d'),
+                                'status' => 1,
+                                'updated' => $this->utc_time
+                            );
+    
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->insert_data(TBL_TRANSACTION, $data_to_insert);
+    
+                            $model = new Sitefunction();
+                            $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
+    
+                            $model = new Sitefunction();
+                            $model->protect(false);
+                            $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_godavari[0]['hostel_id']));
+                        }else{
+                            //Check for next hostel
+                            $model = new Sitefunction();
+                            $where = array(
+                                'r.hostel_id' => 2,
+                            );
+                            $fetch_room_boys_krishna  = $model->get_all_rows(TBL_ROOM . ' as r', 'r.*', $where);
+                            $check_room_flag = true;
+                            $bed_id = 0;
+                            for($i = 0; $i < sizeof($fetch_room_boys_krishna); $i++){
+                                $model = new Sitefunction();
+                                $fetch_room_availability = $model->get_all_rows(TBL_BEDS , '*', array('room_id' => $fetch_room_boys_krishna[$i]['id'] , 'is_available' => 1));
+                                if(sizeof($fetch_room_availability) > 0){
+                                    //Bed available in room so break loop and allocate bed id
+                                    $check_room_flag = true;
+                                    $bed_id = $fetch_room_availability[0]['id'];
+                                    break;
+                                }else{
+                                    $check_room_flag = false;
+                                }
+                            }
+                            if(sizeof($fetch_room_boys_krishna) > 0){
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->update_data(TBL_BEDS, array('is_available' => 0 ,'student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $bed_id));
+    
+                                $currentDate = new \DateTime();
+                                $currentDate->modify('+6 months');
+    
+                                $data_to_insert = array(
+                                    'student_id' => $result['student_id'],
+                                    'bed_id' => $bed_id,
+                                    'start_date' => $this->utc_time,
+                                    'end_date' => $currentDate->format('Y-m-d'),
+                                    'status' => 1,
+                                    'updated' => $this->utc_time
+                                );
+    
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->insert_data(TBL_TRANSACTION, $data_to_insert);
+    
+                                $model = new Sitefunction();
+                                $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+    
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+                            }
+                        }
                         
                     }else{
                         $model = new Sitefunction();
@@ -285,32 +350,48 @@ class User extends MyController
                         );
                         $fetch_room_boys_krishna  = $model->get_all_rows(TBL_ROOM . ' as r', 'r.*', $where);
                         if(sizeof($fetch_room_boys_krishna) > 0){
-                            $model = new Sitefunction();
-                            $model->protect(false);
-                            $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_boys_krishna[0]['id']));
-
-                            $currentDate = new \DateTime();
-                            $currentDate->modify('+6 months');
-
-                            $data_to_insert = array(
-                                'student_id' => $result['student_id'],
-                                'bed_id' => $fetch_room_boys_krishna[0]['id'],
-                                'start_date' => $this->utc_time,
-                                'end_date' => $currentDate->format('Y-m-d'),
-                                'status' => 1,
-                                'updated' => $this->utc_time
-                            );
-
-                            $model = new Sitefunction();
-                            $model->protect(false);
-                            $model->insert_data(TBL_TRANSACTION, $data_to_insert);
-
-                            $model = new Sitefunction();
-                            $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
-
-                            $model = new Sitefunction();
-                            $model->protect(false);
-                            $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+                            $check_room_flag = true;
+                            $bed_id = 0;
+                            for($i = 0; $i < sizeof($fetch_room_boys_krishna); $i++){
+                                $model = new Sitefunction();
+                                $fetch_room_availability = $model->get_all_rows(TBL_BEDS , '*', array('room_id' => $fetch_room_boys_krishna[$i]['id'] , 'is_available' => 1));
+                                if(sizeof($fetch_room_availability) > 0){
+                                    //Bed available in room so break loop and allocate bed id
+                                    $check_room_flag = true;
+                                    $bed_id = $fetch_room_availability[0]['id'];
+                                    break;
+                                }else{
+                                    $check_room_flag = false;
+                                }
+                            }
+                            if($check_room_flag == true){
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->update_data(TBL_BEDS, array('is_available' => 0 ,'student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $bed_id));
+    
+                                $currentDate = new \DateTime();
+                                $currentDate->modify('+6 months');
+    
+                                $data_to_insert = array(
+                                    'student_id' => $result['student_id'],
+                                    'bed_id' => $bed_id,
+                                    'start_date' => $this->utc_time,
+                                    'end_date' => $currentDate->format('Y-m-d'),
+                                    'status' => 1,
+                                    'updated' => $this->utc_time
+                                );
+    
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->insert_data(TBL_TRANSACTION, $data_to_insert);
+    
+                                $model = new Sitefunction();
+                                $fetch_hostel_current_qty = $model->get_all_rows(TBL_HOSTEL , '*', array('id' => $fetch_room_boys_krishna[0]['hostel_id']));
+    
+                                $model = new Sitefunction();
+                                $model->protect(false);
+                                $model->update_data(TBL_HOSTEL, array('total_available_beds' => $fetch_hostel_current_qty[0]['total_available_beds'] - 1), array('id' => $fetch_room_boys_krishna[0]['hostel_id']));   
+                            }
                         }
                     }
                 }else if($result['gender'] == 'F'){
@@ -326,13 +407,12 @@ class User extends MyController
                         'b.is_available' => 1
                     );
                     $fetch_room_girls = $model->get_all_rows(TBL_ROOM . ' as r', 'b.*,r.hostel_id', $where,$join);
-                    // echo json_encode($fetch_room_girls);
 
                     if(sizeof($fetch_room_girls) > 0){
 
                         $model = new Sitefunction();
                         $model->protect(false);
-                        $model->update_data(TBL_BEDS, array('student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_girls[0]['id']));
+                        $model->update_data(TBL_BEDS, array('is_available' => 0 ,'student_id' => $result['student_id'] , 'updated' => $this->utc_time), array('id' => $fetch_room_girls[0]['id']));
 
                         $currentDate = new \DateTime();
                         $currentDate->modify('+6 months');
@@ -359,7 +439,6 @@ class User extends MyController
                     }
                 }
             }
-            
         }
         $model = new Sitefunction();
         $model->protect(false);
@@ -463,11 +542,15 @@ class User extends MyController
         //     }
         // }
     // }
-
-
     
-
-
-    
-
+    public function fetch_allocated_users(){
+        $model = new Sitefunction();
+        $join = array(
+            TBL_BEDS . ' as b' => 'b.id=t.bed_id',
+            TBL_ROOM . ' as r' => 'r.id=b.room_id',
+            TBL_HOSTEL . ' as h' => 'h.id=r.hostel_id',
+        );
+        $this->dataModule['allocation_details'] = $model->get_all_rows(TBL_TRANSACTION . ' as t', 't.*,b.bed_no,r.room_no,h.name,r.block' , array(), $join);
+        echo view('user/room_allocations', $this->dataModule);
+    }
 }

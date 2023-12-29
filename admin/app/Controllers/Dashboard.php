@@ -19,15 +19,23 @@ class Dashboard extends MyController
 
     public function index()
     {
-        $model = new Sitefunction();
-        $this->dataModule['Ghostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 1),array(),'','','',array(),'hostel_id');
-        $model = new Sitefunction();
-        $this->dataModule['Khostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 2),array(),'','','',array(),'hostel_id');
-        $model = new Sitefunction();
-        $this->dataModule['Yhostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 3),array(),'','','',array(),'hostel_id');
-        $model = new Sitefunction();
-        $this->dataModule['Gohostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 4),array(),'','','',array(),'hostel_id');
+        // $model = new Sitefunction();
+        // $this->dataModule['Ghostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 1),array(),'','','',array(),'hostel_id');
+        // $model = new Sitefunction();
+        // $this->dataModule['Khostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 2),array(),'','','',array(),'hostel_id');
+        // $model = new Sitefunction();
+        // $this->dataModule['Yhostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 3),array(),'','','',array(),'hostel_id');
+        // $model = new Sitefunction();
+        // $this->dataModule['Gohostel'] = $model->get_all_rows(TBL_ROOM, ' COUNT(*) as available_room_count', array('hostel_id' => 4),array(),'','','',array(),'hostel_id');
 
+        $model = new Sitefunction();
+        $this->dataModule['Ghostel'] = $model->get_all_rows(TBL_HOSTEL, 'total_available_beds', array('id' => 1));
+        $model = new Sitefunction();
+        $this->dataModule['Khostel'] = $model->get_all_rows(TBL_HOSTEL, 'total_available_beds', array('id' => 2));
+        $model = new Sitefunction();
+        $this->dataModule['Yhostel'] = $model->get_all_rows(TBL_HOSTEL, 'total_available_beds', array('id' => 3));
+        $model = new Sitefunction();
+        $this->dataModule['Gohostel'] = $model->get_all_rows(TBL_HOSTEL, 'total_available_beds', array('id' => 4));
         echo view('dashboard/index', $this->dataModule);  
     }
 }

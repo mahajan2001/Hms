@@ -216,80 +216,55 @@
                 <div class="col-md-3">
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <?php
-                            foreach ($Ghostel as $roomCount) {
-                                // Assuming $roomCount is an associative array
-                                foreach ($roomCount as $key => $value) {
-                                    echo "<h3>$value</h3>";
-                                }
-                            }
-                            ?>
-                            <p>Ganga Available Room</p>
+                            <h3><?php echo $Ghostel[0]['total_available_beds'] ?></h3>
+                            <p>Ganga Available Beds</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-bed"></i>
                         </div>
-                        <a href="<?= HOSTEL_PATH ?>" class="small-box-footer">More info <i
+                        <a href="<?= HOSTEL_PATH ?>/index/1" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="small-box bg-info">
                         <div class="inner">
-                        <?php
-                            foreach ($Khostel as $roomCount) {
-                                // Assuming $roomCount is an associative array
-                                foreach ($roomCount as $key => $value) {
-                                    echo "<h3>$value</h3>";
-                                }
-                            }
-                            ?>
-                            <p>Krishna Available Room</p>
+                            
+                            <h3><?php echo $Khostel[0]['total_available_beds'] ?></h3>
+                            <p>Krishna Available Beds</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-bed"></i>
                         </div>
-                        <a href="<?= HOSTEL_PATH ?>" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                        <?php
-                            foreach ($Yhostel as $roomCount) {
-                                // Assuming $roomCount is an associative array
-                                foreach ($roomCount as $key => $value) {
-                                    echo "<h3>$value</h3>";
-                                }
-                            }
-                            ?>
-                            <p>Godavari Available Room</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-bed"></i>
-                        </div>
-                        <a href="<?= HOSTEL_PATH ?>" class="small-box-footer">More info <i
+                        <a href="<?= HOSTEL_PATH ?>/index/2" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="small-box bg-warning">
                         <div class="inner">
-                        <?php
-                            foreach ($Gohostel as $roomCount) {
-                                // Assuming $roomCount is an associative array
-                                foreach ($roomCount as $key => $value) {
-                                    echo "<h3>$value</h3>";
-                                }
-                            }
-                            ?>
-                            <p>Yamuna Available Room</p>
+                            
+                            <h3><?php echo $Yhostel[0]['total_available_beds'] ?></h3>
+                            <p>Yamuna Available Beds</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-bed"></i>
                         </div>
-                        <a href="<?= HOSTEL_PATH ?>" class="small-box-footer">More info <i
+                        <a href="<?= HOSTEL_PATH ?>/index/3" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            
+                            <h3><?php echo $Gohostel[0]['total_available_beds'] ?></h3>
+                            <p>Godavari Available Beds</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <a href="<?= HOSTEL_PATH ?>/index/4" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>

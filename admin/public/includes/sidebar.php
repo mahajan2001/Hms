@@ -3,7 +3,7 @@
         <div class="nano-content bg-dark">
             <ul class="bg-dark">
                 <li class="active"><a href="<?= DASHBOARD_PATH ?>"><i class="fa-solid fa-home"></i> Dashboard </a></li>
-                <li><a class="sidebar-sub-toggle"><i class="fa fa-gear"></i>Users <span
+                <?php /* <li><a class="sidebar-sub-toggle"><i class="fa fa-gear"></i>Users <span
                             class="sidebar-collapse-icon fa-solid fa-chevron-down"></span></a>
                     <ul>
                         <!-- <li><a href="<?= OFFICER_PATH ?>"><i class="fa fa-user"></i>Officers<span></span></a></li> -->
@@ -17,8 +17,8 @@
                         <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li> -->
 
                     </ul>
-                </li>
-                
+                </li> */ ?>
+
                 <?php /* 
                 <li><a class="sidebar-sub-toggle"><i class="fa fa-gear"></i>Logs <span
                             class="sidebar-collapse-icon fa-solid fa-chevron-down"></span></a>
@@ -47,33 +47,34 @@
                 <!-- <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
                 <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li> -->
 
-                      <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
-                        <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
-                        <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
-                        <li><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
-                        <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
-                        <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li>
+                <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
+                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
+                <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
+                <li><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
+                <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
+                <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li>
+                <li><a href="<?= USER_PATH ?>/fetch_allocated_users"><i class="fa fa-user"></i>Room Allocations</a></li>
             </ul>
         </div>
     </div>
 </div><!-- /# sidebar -->
 <div class="header">
     <div class="pull-left p-r-50">
-        <?php /* <div class="logo"><span><?= strtoupper($this->settings->project_name) ?></span></a></div>*/?>
+        <?php /* <div class="logo"><span><?= strtoupper($this->settings->project_name) ?></span></a></div>*/ ?>
         <div class="hamburger sidebar-toggle">
             <span class="line "></span>
             <span class="line "></span>
-            <span class="line ">  </span>
+            <span class="line "> </span>
         </div>
     </div>
-    
+
     <img src="<?= FETCH_IMAGE ?>/<?= ($controller->fetchProjectDetails())['project_logo'] ?>" width="50px">
-    
+
     <span style="margin-left: 5%;font-size: 15px; color: white;"><?= ($controller->fetchProjectDetails())['project_name'] ?></span>
     <span class="" style="margin-left: 40%; color: white;"><i class="fa fa-map-marker fa-lg" style="margin-right: 5px;"></i><?= ($controller->fetchProjectDetails())['address'] ?></span>
 
     <div class="pull-right p-r-15">
-   
+
         <ul>
             <li class="header-icon dib">
                 <span class="user-avatar" style="color: white;">

@@ -192,6 +192,18 @@ define("TBL_ROOM", TBL_PREFIX .  "room");
 define("TBL_BEDS", TBL_PREFIX .  "beds");
 define("TBL_HOSTEL", TBL_PREFIX .  "hostel");
 define("TBL_BLOCK", TBL_PREFIX .  "block");
+define("TBL_COURSES", TBL_PREFIX .  "courses");
+
+define("TBL_SUB_COURSES", TBL_PREFIX .  "subcourses");
+define("TBL_MESS_REBATE", TBL_PREFIX .  "mess_rebate");
+
+
+
+
+
+
+
+
 
 
 
