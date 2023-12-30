@@ -102,45 +102,13 @@
                                         </tr>
                                         <tr>
                                             <td>Registration Number</td>
-                                            <td colspan="3">
-                                                <select id="registration_no" class="form-control required"
-                                                    name="registration_no" placeholder="Select the Registration No">
-                                                    <option value=""></option>
-                                                   
-                                                    <?php
-                                                foreach ($student as $key => $value) {
-                                                    ?>
-                                                    <option value="<?php echo $value['id']; ?>">
-                                                        <?php echo $value['student_id']; ?>
-                                                    </option>
-                                                    <?php
-                                                }
-                                                ?>
-
-                                                </select>
-                                                <span id="registration_no_error_message" style="color:red"></span>
-                                            </td>
+                                            <td colspan="3"><input class="form-control" type="text" id="registration_no"></td>
+                                            
                                         </tr>
-                                        <!-- Repeat this pattern for the remaining rows -->
-                                        <!-- ... -->
+
                                         <tr>
                                             <td>Course</td>
-                                            <td colspan="3">
-                                                <select id="course_type" class="form-control required"
-                                                    name="course_type" placeholder="Select the Course">
-                                                    <option value=""></option>
-                                                    <option value="M.Tech">M.Tech</option>
-                                                    <option value="M.Sc">M.Sc</option>
-                                                    <option value="PhD">PhD</option>
-                                                    <option value="JRF">JRF</option>
-                                                    <option value="SRF">SRF</option>
-                                                    <option value="PA</">PA</option>
-                                                    <option value="RA</">RA</option>
-                                                    <option value="Intern">Intern</option>
-                                                    <option value="TA</">TA</option>
-                                                </select>
-                                                <span id="course_type_error_message" style="color:red"></span>
-                                            </td>
+                                            <td colspan="3"><input class="form-control" type="text" id="course"></td>
                                         </tr>
                                         <tr>
                                             <td>Department</td>
@@ -148,7 +116,7 @@
                                         </tr>
                                         <tr>
                                             <td>Date of Joining Hostel </td>
-                                            <td colspan="3"><input class="form-control" type="date" id="js_date"></td>
+                                            <td colspan="3"><input class="form-control" type="text" id="js_date"></td>
                                         </tr>
                                         <tr>
                                             <td>Room Number</td>
@@ -160,24 +128,7 @@
                                         </tr>
                                         <tr>
                                             <td>Mobile Number</td>
-                                            <td colspan="3">
-                                                <select id="mobile_no" class="form-control required"
-                                                    name="mobile_no" placeholder="Select the Mobile Number">
-                                                    <option value=""></option>
-                                                   
-                                                    <?php
-                                                foreach ($student as $key => $value) {
-                                                    ?>
-                                                    <option value="<?php echo $value['id']; ?>">
-                                                        <?php echo $value['mobile_no']; ?>
-                                                    </option>
-                                                    <?php
-                                                }
-                                                ?>
-
-                                                </select>
-                                                <span id="mobile_no_error_message" style="color:red"></span>
-                                            </td>
+                                            <td colspan="3"><input class="form-control" type="text" id="mobile_number"></td>
                                         </tr>
                                         <tr>
                                             <td>Security Deposit, Amount, Rs(A)</td>
@@ -186,11 +137,6 @@
                                         <tr>
                                             <td>Mess Balance (IF ANY)</td>
                                             <td collapse="4"><input class="form-control" id="mess_balance"></td>
-
-                                        </tr>
-                                        <tr>
-                                            <td id="totalnalance">Total Balance</td>
-                                            <td collapse="4"><input class="form-control" id="total_balance"></td>
 
                                         </tr>
                                     </tbody>

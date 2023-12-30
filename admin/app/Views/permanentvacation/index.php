@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Students</h1>
+                            <h1> Permanent Vacation</h1>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                             <ol class="breadcrumb float-right">
                                 <li><a href="<?= DASHBOARD_PATH ?>">Dashboard &nbsp; </a></li>
                                 / &nbsp;
-                                <li><a>Students</a></li>
+                                <li><a> Permanent Vacation</a></li>
                                 <!--	<li class="active">Data Table</li>-->
                             </ol>
                         </div>

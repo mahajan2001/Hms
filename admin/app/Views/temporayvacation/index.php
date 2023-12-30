@@ -7,7 +7,7 @@
                 <div class="col-lg-8 p-0">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>Students</h1>
+                            <h1> Temporary Vacation</h1>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                             <ol class="breadcrumb float-right">
                                 <li><a href="<?= DASHBOARD_PATH ?>">Dashboard &nbsp; </a></li>
                                 / &nbsp;
-                                <li><a>Students</a></li>
+                                <li><a> Temporary Vacation</a></li>
                                 <!--	<li class="active">Data Table</li>-->
                             </ol>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="card">
 
                             <div class="card-header">
-                                <h4>All Students Temporay Vacation</h4>
+                                <h4>All Students Temporary Vacation</h4>
                                 <a type="submit" class="btn btn-outline-danger btn-flat btn-sm float-right" href="<?= TEMPORAYVACATION_PATH ?>/temporary_vacation">Add Temporay Vacation</a>
                             </div>
                             <div class="card-body">
