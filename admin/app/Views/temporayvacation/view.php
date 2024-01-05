@@ -107,7 +107,7 @@
                                                 <!-- Section 2 -->
                                                 <tr class="section2">
                                                     <td class=""><strong>Full Name of Student </strong> </td>
-                                                    <td style="border-right: hidden"><?php $tempView['name'] ?></td>
+                                                    <td style="border-right: hidden"><?= $tempView['name'] ?></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>
                                                     <td style="border-right: hidden"></td>

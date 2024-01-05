@@ -61,7 +61,7 @@
                                             <?= $controller->session->getFlashData('error'); ?>
                                         </div>
                                     </div>
-                                    <?php
+                                <?php
                                 } ?>
                                 <h1>TEMPORARY VACATION</h1>
                                 <br>
@@ -79,21 +79,20 @@
                                         <!-- Rows -->
                                         <tr>
                                             <td>Name of the Student</td>
-                                           
+
                                             <td colspan="3">
-                                                <select id="name" class="form-control required"
-                                                    name="name" placeholder="Select the student namer">
+                                                <select id="name" class="form-control required" name="name" placeholder="Select the student namer">
                                                     <option value=""></option>
-                                                   
+
                                                     <?php
-                                                foreach ($student as $key => $value) {
+                                                    foreach ($student as $key => $value) {
                                                     ?>
-                                                    <option value="<?php echo $value['id']; ?>">
-                                                        <?php echo $value['name']; ?>
-                                                    </option>
+                                                        <option value="<?php echo $value['id']; ?>">
+                                                            <?php echo $value['id']; ?>
+                                                        </option>
                                                     <?php
-                                                }
-                                                ?>
+                                                    }
+                                                    ?>
 
                                                 </select>
                                                 <span id="name_error_message" style="color:red"></span>
@@ -102,41 +101,43 @@
                                         </tr>
                                         <tr>
                                             <td>Registration Number</td>
-                                            <td colspan="3"><input class="form-control" type="text" id="registration_no"></td>
-                                            
+                                            <td colspan="3"><input class="form-control" type="text" id="registration_no" name="registration_no"></td>
                                         </tr>
 
                                         <tr>
                                             <td>Course</td>
-                                            <td colspan="3"><input class="form-control" type="text" id="course"></td>
+                                            <td colspan="3"><input class="form-control" type="text" id="course" name="course"></td>
                                         </tr>
+
                                         <tr>
                                             <td>Department</td>
-                                            <td colspan="3"><input class="form-control" id="department"></td>
+                                            <td colspan="3"><input class="form-control" id="department" name="department"></td>
                                         </tr>
+
                                         <tr>
                                             <td>Date of Joining Hostel </td>
-                                            <td colspan="3"><input class="form-control" type="text" id="js_date"></td>
+                                            <td colspan="3"><input class="form-control" type="text" id="js_date" name="js_date"></td>
                                         </tr>
+
                                         <tr>
                                             <td>Room Number</td>
-                                            <td colspan="3"><input class="form-control" type="text" id="room_no"></td>
+                                            <td colspan="3"><input class="form-control" type="text" id="room_no" name="room_no"></td>
                                         </tr>
                                         <tr>
                                             <td>Date of Temporary Vacation of Hostel</td>
-                                            <td colspan="3"><input class="form-control" type="date" id="tvh_date"></td>
+                                            <td colspan="3"><input class="form-control" type="date" id="tvh_date" name="tvh_date"></td>
                                         </tr>
                                         <tr>
                                             <td>Mobile Number</td>
-                                            <td colspan="3"><input class="form-control" type="text" id="mobile_number"></td>
+                                            <td colspan="3"><input class="form-control" type="text" id="mobile_number" name="mobile_number"></td>
                                         </tr>
                                         <tr>
                                             <td>Security Deposit, Amount, Rs(A)</td>
-                                            <td colspan="3"><input class="form-control" id="deposit"></td>
+                                            <td colspan="3"><input class="form-control" id="deposit" name="deposit"></td>
                                         </tr>
                                         <tr>
                                             <td>Mess Balance (IF ANY)</td>
-                                            <td collapse="4"><input class="form-control" id="mess_balance"></td>
+                                            <td collapse="4"><input class="form-control" id="mess_balance" name="mess_balance"></td>
 
                                         </tr>
                                     </tbody>
@@ -148,8 +149,7 @@
                             </div>
                             <br>
                             <div class="form-group">
-                                <button id="submitButton" onclick="return adddata()"
-                                    class="btn btn-outline-primary float-right">SAVE</button>
+                                <button id="submitButton" onclick="return adddata()" class="btn btn-outline-primary float-right">SAVE</button>
                             </div>
 
                             </table>
@@ -161,10 +161,6 @@
     </div><!-- /# main -->
 </div><!-- /# content wrap -->
 <script>
-
-
-
-
     function adddata() {
         var name = $("#name").val();
         var registration_no = $("#registration_no").val();
@@ -176,11 +172,11 @@
         var mobile_no = $("#mobile_no").val();
         var deposit = $("#deposit").val();
         var mess_balance = $("#mess_balance").val();
-       // var receipt_no_mess = $("#receipt_no_mess").val();
-       // var date_mess = $("#date_mess").val();
+        // var receipt_no_mess = $("#receipt_no_mess").val();
+        // var date_mess = $("#date_mess").val();
         var total_balance = $("#total_balance").val();
-      //  var receipt_no_tobalance = $("#receipt_no_tobalance").val();
-      //  var date_tobalance = $("#date_tobalance").val();
+        //  var receipt_no_tobalance = $("#receipt_no_tobalance").val();
+        //  var date_tobalance = $("#date_tobalance").val();
 
         $.ajax({
             url: " <?= TEMPORAYVACATION_PATH ?>/addtemporayvacation ",
@@ -201,19 +197,43 @@
                 //"receipt_no_mess": receipt_no_mess,
                 //"date_mess": date_mess,
                 "total_balance": total_balance,
-               // "receipt_no_tobalance": receipt_no_tobalance,
-               // "date_tobalance": date_tobalance,
+                // "receipt_no_tobalance": receipt_no_tobalance,
+                // "date_tobalance": date_tobalance,
             }),
-            success: function (data) {
+            success: function(data) {
                 if (data.success == true) {
                     window.location.href = "<?= TEMPORAYVACATION_PATH ?>"
                 } else {
                     window.location.reload();
                 }
             },
-            error: function (data) {
-            }
+            error: function(data) {}
         })
+
+       
+
+    }
+</script>
+
+<script>
+
+    function getData(){
+        $('#name').on('change', function() {
+            var id = $(this).val();
+
+            // Assuming 'registration_no', 'course_type', 'department' are IDs of fields to update
+            if (id === $value['student_id']) {
+                $('#registration_no').val($value['registration_no']);
+                $('#course_type').val($value['course_type']);
+                $('#department').val($value['department']);
+                $('#js_date').val($value['joining_date']);
+                $('#room_no').val($value['room_no']);
+                $('#tvh_date').val($value['temporary_vacation_date']);
+                $('#mobile_no').val($value['mobile_no']);
+                $('#deposit').val($value['deposit']);
+                $('#mess_balance').val($value['mess_balance']);
+            } 
+        });
     }
 </script>
 

@@ -216,7 +216,7 @@
                 <div class="col-md-3">
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3><?php echo $Ghostel[0]['total_available_beds'] ?></h3>
+                            <h3><?php echo $Ghostel[0]['total_beds'] ?> / <?php echo $Ghostel[0]['total_available_beds'] ?></h3>
                             <p>Ganga Available Beds</p>
                         </div>
                         <div class="icon">
@@ -230,11 +230,11 @@
                     <div class="small-box bg-info">
                         <div class="inner">
                             
-                            <h3><?php echo $Khostel[0]['total_available_beds'] ?></h3>
+                            <h3> <?php echo $Khostel[0]['total_beds'] ?> /  <?php echo $Khostel[0]['total_available_beds'] ?></h3>
                             <p>Krishna Available Beds</p>
                         </div>
                         <div class="icon">
-                            <i class="fas fa-bed"></i>
+                            <i class="far fa-bed"></i>
                         </div>
                         <a href="<?= HOSTEL_PATH ?>/index/2" class="small-box-footer">More info <i
                                 class="fas fa-arrow-circle-right"></i></a>
@@ -244,7 +244,7 @@
                     <div class="small-box bg-warning">
                         <div class="inner">
                             
-                            <h3><?php echo $Yhostel[0]['total_available_beds'] ?></h3>
+                            <h3> <?php echo $Yhostel[0]['total_beds'] ?> /  <?php echo $Yhostel[0]['total_available_beds'] ?></h3>
                             <p>Yamuna Available Beds</p>
                         </div>
                         <div class="icon">
@@ -258,7 +258,7 @@
                     <div class="small-box bg-danger">
                         <div class="inner">
                             
-                            <h3><?php echo $Gohostel[0]['total_available_beds'] ?></h3>
+                            <h3> <?php echo $Gohostel[0]['total_beds'] ?> /  <?php echo $Gohostel[0]['total_available_beds'] ?></h3>
                             <p>Godavari Available Beds</p>
                         </div>
                         <div class="icon">

@@ -48,12 +48,13 @@
                 <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li> -->
 
                 <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
-                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
-                <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
-                <li><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
-                <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
-                <li><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Rebate Form</a></li>
-                <li><a href="<?= USER_PATH ?>/fetch_allocated_users"><i class="fa fa-user"></i>Room Allocations</a></li>
+                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fas fa-suitcase"></i>Temporay Vacation</a></li>
+                <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fas fa-umbrella-beach"></i>Permanent Vacation</a></li>
+                <li><a href="<?= ROOM_PATH ?>"><i class="fas fa-bed"></i>Room</a></li>
+                <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fas fa-user-circle"></i>Guest Application</a></li>
+                <li><a href="<?= REBATEFORM_PATH ?>"><i class="fas fa-clipboard-check"></i>Rebate Form</a></li>
+                <li><a href="<?= USER_PATH ?>/fetch_allocated_users"><i class="fas fa-list-alt"></i>Room Allocations</a></li>
+                <li><a href="<?= MESSCHARGES_PATH ?>/edit"><i class="fas fa-money-bill"></i>Mess Charges</a></li>
             </ul>
         </div>
     </div>

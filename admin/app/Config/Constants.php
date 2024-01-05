@@ -150,6 +150,7 @@ define('ROOM_PATH', SITE_URL . 'room');
 define('GUESTAPPLICATION_PATH', SITE_URL . 'guestapplication');
 define('REBATEFORM_PATH', SITE_URL . 'rebateform');
 define('HOSTEL_PATH', SITE_URL . 'hostel');
+define('MESSCHARGES_PATH', SITE_URL . 'messcharges');
 
 
 
@@ -196,6 +197,7 @@ define("TBL_COURSES", TBL_PREFIX .  "courses");
 
 define("TBL_SUB_COURSES", TBL_PREFIX .  "subcourses");
 define("TBL_MESS_REBATE", TBL_PREFIX .  "mess_rebate");
+define("TBL_MESS_CHARGES", TBL_PREFIX .  "mess_charges");
 
 
 

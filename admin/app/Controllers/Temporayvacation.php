@@ -181,4 +181,16 @@ class Temporayvacation extends MyController
         $this->dataModule['tempView'] = $result;
         echo view('temporayvacation/view', $this->dataModule);
     }
+
+    public function getAllTempVacation($id)
+    {
+        // $model = new Sitefunction();
+        // $this->dataModule['vendors'] = $model->get_all_rows(TBL_VENDORS , '*', array('status' => 1));
+        $model = new Sitefunction();
+        $join = array(
+            TBL_USER_REGISTRATION . ' as ed' => 'ed.student_id=e.student_id',
+        );
+        $this->dataModule['tempVacation'] = $model->get_all_rows( TBL_TEMPORARY_VACATION. ' as e' , 'e.*,ed.*', array('e.student_id' => $id),$join);
+        echo view('temporayvacation/temporatry_vacation', $this->dataModule);
+    }
 }
