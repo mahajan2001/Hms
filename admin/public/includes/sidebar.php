@@ -2,7 +2,7 @@
     <div class="nano">
         <div class="nano-content bg-dark">
             <ul class="bg-dark">
-                <li class="active"><a href="<?= DASHBOARD_PATH ?>"><i class="fa-solid fa-home"></i> Dashboard </a></li>
+                <li id="dashboard_sidebar"><a href="<?= DASHBOARD_PATH ?>"><i class="fa-solid fa-home"></i> Dashboard </a></li>
                 <?php /* <li><a class="sidebar-sub-toggle"><i class="fa fa-gear"></i>Users <span
                             class="sidebar-collapse-icon fa-solid fa-chevron-down"></span></a>
                     <ul>
@@ -47,13 +47,13 @@
                 <!-- <li><a href="<?= USER_PATH ?>"><i class=""></i>Registration Form</a></li>
                 <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class=""></i>Temporay vacation</a></li> -->
 
-                <li><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
-                <li><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fas fa-suitcase"></i>Temporay Vacation</a></li>
-                <li><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fas fa-umbrella-beach"></i>Permanent Vacation</a></li>
-                <li><a href="<?= ROOM_PATH ?>"><i class="fas fa-bed"></i>Room</a></li>
-                <li><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fas fa-user-circle"></i>Guest Application</a></li>
-                <li><a href="<?= REBATEFORM_PATH ?>"><i class="fas fa-clipboard-check"></i>Rebate Form</a></li>
-                <li><a href="<?= USER_PATH ?>/fetch_allocated_users"><i class="fas fa-list-alt"></i>Room Allocations</a></li>
+                <li id="user_sidebar"><a href="<?= USER_PATH ?>"><i class="fa fa-user"></i>USER<span></span></a></li>
+                <li id="temporary_vacation_sidebar"><a href="<?= TEMPORAYVACATION_PATH ?>"><i class="fa fa-user"></i>Temporay Vacation</a></li>
+                <li id="permanent_vacation_sidebar"><a href="<?= PERMANENTVACATION_PATH ?>"><i class="fa fa-user"></i>Permanent Vacation</a></li>
+                <li id="room_sidebar"><a href="<?= ROOM_PATH ?>"><i class="fa fa-user"></i>Room</a></li>
+                <li id="guest_sidebar"><a href="<?= GUESTAPPLICATION_PATH ?>"><i class="fa fa-user"></i>Guest Application</a></li>
+                <li id="rebate_sidebar"><a href="<?= REBATEFORM_PATH ?>"><i class="fa fa-user"></i>Mess Rebate Form</a></li>
+                <li id="room_allocation_sidebar"><a href="<?= USER_PATH ?>/fetch_allocated_users"><i class="fa fa-user"></i>Room Allocations</a></li>
                 <li><a href="<?= MESSCHARGES_PATH ?>/edit"><i class="fas fa-money-bill"></i>Mess Charges</a></li>
             </ul>
         </div>
@@ -111,3 +111,17 @@
         </ul>
     </div>
 </div>
+<script>
+    $('li').on('click', function() {
+        localStorage.setItem('sidebar_id', $(this).attr('id'));
+    });
+
+    $(document).ready(function() {
+        $('li').removeClass('active');
+        var id_to_set = localStorage.getItem('sidebar_id');
+        if (id_to_set) {
+            $('#' + id_to_set).addClass('active');
+        }
+        localStorage.setItem('sidebar_id', '');
+    });
+</script>
