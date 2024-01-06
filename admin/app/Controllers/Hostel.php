@@ -11,9 +11,6 @@ class Hostel extends MyController
 {
     use ResponseTrait;
 
-
-    
-
     public function __construct()
     {
         parent::__construct();

@@ -38,6 +38,7 @@ class Registration extends MyController
         $academic_year = $requestData['academic_year'];
         $diat_dep_name = $requestData['diat_dep_name'];
         $reg_no = $requestData['reg_no'];
+        $fcm_token = $requestData['fcm_token'];
         
         if (isset($_FILES['image']) && !empty($_FILES['image'])) {
             $randdom = round(microtime(time() * 1000)) . rand(000, 999);
@@ -82,6 +83,7 @@ class Registration extends MyController
         $data = array(
             'name' => $name,
             'dob' => $dob,
+            'fcm_token' => $fcm_token,
             'student_id' => $student_id,
             'gender' => $gender,
             'blood_group' => $blood_group,
@@ -154,7 +156,7 @@ class Registration extends MyController
                         
                         $model = new Sitefunction();
                         $model->protect(false);
-                        $model->update_data(TBL_USER_REGISTRATION, array('fcm_token' => $fcm_token , 'updated_at' => $this->utc_time), array('id' => $check_login[0]));
+                        $model->update_data(TBL_USER_REGISTRATION, array('fcm_token' => $fcm_token , 'updated_at' => $this->utc_time), array('id' => $check_login[0]['id']));
                         
                         $result = [];
                         $result['id'] = $check_login[0]['id'];
@@ -190,17 +192,6 @@ class Registration extends MyController
         return $this->respond($this->dataModule);
     }
     
-    // public function
-    public function test_fcm(){
-        $client = new Client(IMAGE_UPLOAD_PATH . 'fcmkey/service_account.json');
-        $recipient = new Recipient();
-        $notification = new Notification();
-        $recipient->setSingleRecipient('cgkNUmIHRbqfdj5xYie8Ga:APA91bHyQIXNQfKWiSJg8KuY1gjOnYrmJgiYetw0vltrus9MGuDtOhN7aaXQHds9GqhwJjbAH2Zyr4mLJQig0nZVKMFxEB3AfaSZ1Z0HkIKxrT8mB1ONb7lS25HF8ic4xWK97E7aeJcn');
-        $notification->setNotification('TEST TITLE', 'NOTIFICATION_BODY');
-        $client->build($recipient, $notification);
-        $response = $client->fire();
-        echo $response;
-    }
     
     public function add_temporary_vacation(){
         $requestData = $this->request->getJson();
@@ -257,8 +248,9 @@ class Registration extends MyController
         $model->protect(false);
         $addresult = $model->insert_data(TBL_TEMPORARY_VACATION, $data);
         $data = array(
-            'message' => 'Temperorary vacation added successfully',
+            'message' => 'Temporary vacation added successfully',
         );
+        $this->send_fcm_msg($user_details[0]['fcm_token'], 'Temporary Vacation', 'Temporary vacation added successfully');
         $this->dataModule = $this->success($data);
         return $this->respond($this->dataModule);
     }
@@ -343,6 +335,7 @@ class Registration extends MyController
         $data = array(
             'message' => 'Permanent vacation added successfully',
         );
+        $this->send_fcm_msg($user_details[0]['fcm_token'], 'Permanent Vacation', 'Permanent vacation added successfully');
         $this->dataModule = $this->success($data);
         return $this->respond($this->dataModule);
     }
@@ -410,8 +403,18 @@ class Registration extends MyController
         $data = array(
             'message' => 'Mess Rebate added successfully',
         );
+        $this->send_fcm_msg($user_details[0]['fcm_token'], 'Mess Rebate', 'Mess Rebate added successfully');
         $this->dataModule = $this->success($data);
         return $this->respond($this->dataModule);
-        
+    }
+
+    public function send_fcm_msg($token, $title, $body){
+        $client = new Client(IMAGE_UPLOAD_PATH . 'fcmkey/service_account.json');
+        $recipient = new Recipient();
+        $notification = new Notification();
+        $recipient->setSingleRecipient($token);
+        $notification->setNotification($title, $body);
+        $client->build($recipient, $notification);
+        $response = $client->fire();
     }
 }

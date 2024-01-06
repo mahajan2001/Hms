@@ -92,7 +92,7 @@
                                                     <td><?= $row['course_type'] ?></td>
                                                     <td><?= $row['diat_dep_name'] ?></td>
                                                     <td>
-                                                        <?php if ($row['is_allocated'] == 1) { ?>
+                                                        <?php if($row['is_allocated'] == 1) { ?>
                                                             Yes
                                                         <?php } else { ?>
                                                             No
@@ -104,7 +104,7 @@
                                                                 <input type="checkbox" class="status_change ct_switch" data-id="<?= $row['id'] ?>" value="<?= $row['status'] ?>" <?= $row['status'] == 1 ? "checked" : "" ?>>
                                                                 <span class="slider round"></span>
                                                             </label>
-                                                        </div>
+                                                        </div> 
                                                     </td>
                                                     <td>&nbsp;&nbsp;<a class="fa-solid fa-pen-to-square text-blue" onclick="openModal(<?= $row["id"]; ?>)" href="#" title="Allocate Room!"></a>
                                                     </td>
@@ -127,65 +127,65 @@
 
                 </div><!-- /# card container -->
                 <!-- /# column -->
-                <div class="modal fade" id="hostelAllocationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content" style="height: 400px;">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Allocate Room</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Select Hostel</label>
-                                            <select id="hostel" class="form-control required" name="hostel" placeholder="Select Hostel">
-                                                <option value="">Select Hostel</option>
-                                                <?php foreach ($hostels as $h) { ?>
-                                                    <option value="<?php echo $h['id'] ?>"><?php echo $h['name'] ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
+            <div class="modal fade" id="hostelAllocationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content" style="height: 400px;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Allocate Room</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Select Hostel</label>
+                                        <select id="hostel" class="form-control required" name="hostel" placeholder="Select Hostel">
+                                            <option value="">Select Hostel</option>
+                                            <?php foreach($hostels as $h) { ?>
+                                                <option value="<?php echo $h['id'] ?>"><?php echo $h['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
                                     </div>
-                                    <div class="col-md-12" id="block_div" style="display:none;">
-                                        <div class="form-group">
-                                            <label>Select Block</label>
-                                            <select id="block" class="form-control required" name="block" placeholder="Select Block">
-                                                <option value="">Select Block</option>
-                                                <option value="A">A</option>
-                                                <option value="B">B</option>
-                                                <option value="C">C</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="col-md-12" id="block_div" style="display:none;">
+                                    <div class="form-group">
+                                        <label>Select Block</label>
+                                        <select id="block" class="form-control required" name="block" placeholder="Select Block">
+                                            <option value="">Select Block</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Select Room</label>
-                                            <select id="room" class="form-control required" name="room" placeholder="Select Room">
-                                                <option value="">Select Room</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="col-md-12" >
+                                    <div class="form-group">
+                                        <label>Select Room</label>
+                                        <select id="room" class="form-control required" name="room" placeholder="Select Room">
+                                            <option value="">Select Room</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Select Bed No</label>
-                                            <select id="bed" class="form-control required" name="bed" placeholder="Select Bed">
-                                                <option value="">Select Bed No</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="col-md-12" >
+                                    <div class="form-group">
+                                        <label>Select Bed No</label>
+                                        <select id="bed" class="form-control required" name="bed" placeholder="Select Bed">
+                                            <option value="">Select Bed No</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" onclick="allocate_room()">Save changes</button>
-                                <input hidden value="" id="user_id">
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="allocate_room()">Save changes</button>
+                            <input hidden value="" id="user_id">
                         </div>
                     </div>
                 </div>
+            </div>
             </div><!-- /# main content -->
         </div><!-- /# container-fluid -->
     </div><!-- /# main -->
@@ -193,16 +193,17 @@
 
 <?php include(INCLUDESPATH . '/footer.php'); ?>
 <script type="text/javascript">
-    function openModal(id) {
+
+    function openModal(id){
         $('#user_id').val(id);
         $('#hostelAllocationModal').modal('show');
     }
-
-    $('#hostel').on('change', function() {
+    
+    $('#hostel').on('change', function(){
         var hostel_id = $(this).val();
-        if (hostel_id == 1) {
+        if(hostel_id == 1){
             $('#block_div').css('display', 'block');
-        } else {
+        }else{
             $('#block_div').css('display', 'none');
             $.ajax({
                 type: "POST",
@@ -213,9 +214,9 @@
                 }),
                 success: function(data) {
                     var html = '<option value="">Select Room</option>';
-                    $.each(data, function(i, item) {
-
-                        html += '<option value="' + item.id + '">' + item.room_no + '</option>';
+                    $.each(data, function(i, item){
+                        
+                        html += '<option value="'+ item.id +'">'+ item.room_no +'</option>';
                     });
                     $('#room').html(html);
                 },
@@ -225,8 +226,8 @@
             });
         }
     });
-
-    $('#block').on('change', function() {
+    
+    $('#block').on('change', function(){
         var block_id = $(this).val();
         var hostel_id = $('#hostel').val();
         $.ajax({
@@ -239,9 +240,9 @@
             }),
             success: function(data) {
                 var html = '<option value="">Select Room</option>';
-                $.each(data, function(i, item) {
-
-                    html += '<option value="' + item.id + '">' + item.room_no + '</option>';
+                $.each(data, function(i, item){
+                    
+                    html += '<option value="'+ item.id +'">'+ item.room_no +'</option>';
                 });
                 $('#room').html(html);
             },
@@ -250,8 +251,8 @@
             }
         });
     });
-
-    $('#room').on('change', function() {
+    
+    $('#room').on('change', function(){
         var room_id = $(this).val();
         $.ajax({
             type: "POST",
@@ -262,8 +263,8 @@
             }),
             success: function(data) {
                 var html = '<option value="">Select Bed No</option>';
-                $.each(data, function(i, item) {
-                    html += '<option value="' + item.id + '">' + item.bed_no + '</option>';
+                $.each(data, function(i, item){
+                    html += '<option value="'+ item.id +'">'+ item.bed_no +'</option>';
                 });
                 $('#bed').html(html);
             },
@@ -272,8 +273,8 @@
             }
         });
     });
-
-    function allocate_room() {
+    
+    function allocate_room(){
         var bed_id = $('#bed').val();
         var user_id = $('#user_id').val();
         var hostel_id = $('#hostel').val();
@@ -287,6 +288,7 @@
                 'hostel_id': hostel_id,
             }),
             success: function(data) {
+                $('#hostelAllocationModal').modal('hide');
                 alert('Room allocated successfully');
             },
             error: function(data) {
@@ -294,9 +296,9 @@
             }
         });
     }
+    
 
-
-    $(document).on('change', '.status_change ', function() {
+     $(document).on('change', '.status_change ', function() {
         if ($(this).is(":checked")) {
             var visibility = '1';
         } else {
@@ -312,9 +314,9 @@
                 'status': visibility
             }),
             success: function(data) {
-                if (data.payload.check_flag == 1) {
+                if(data.payload.check_flag == 1){
                     alert("Login credentials sent to student's mail");
-                }
+                } 
             },
             error: function(data) {
                 console.log("error is" + JSON.stringify(data));
